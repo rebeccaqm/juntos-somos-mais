@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://0ttfm6x2w02s"
+path="res://.godot/imported/jogo (2).mp3-da03a8fc59c3971a7ee9b47c76774da1.mp3str"
+
+[deps]
+
+source_file="res://Assets/Sons/geral/jogo (2).mp3"
+dest_files=["res://.godot/imported/jogo (2).mp3-da03a8fc59c3971a7ee9b47c76774da1.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

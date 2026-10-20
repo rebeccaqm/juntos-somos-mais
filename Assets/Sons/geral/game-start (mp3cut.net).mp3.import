@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c64sw02dsvfl7"
+path="res://.godot/imported/game-start (mp3cut.net).mp3-1ec8db4789e3c0676fac7db472bdd557.mp3str"
+
+[deps]
+
+source_file="res://Assets/Sons/geral/game-start (mp3cut.net).mp3"
+dest_files=["res://.godot/imported/game-start (mp3cut.net).mp3-1ec8db4789e3c0676fac7db472bdd557.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
