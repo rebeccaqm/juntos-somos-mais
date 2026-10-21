@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ckdwbrrme3j2s"
-path="res://.godot/imported/fantasma desanimo.jpg-cb62b71823afe3ecbd542359e9249abc.ctex"
+uid="uid://cjbjtm2rlkoc5"
+path="res://.godot/imported/pulando_direita_01.png-7ef5e070d64de0590ec63605ad0d517f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Boss/fantasma desanimo.jpg"
-dest_files=["res://.godot/imported/fantasma desanimo.jpg-cb62b71823afe3ecbd542359e9249abc.ctex"]
+source_file="res://Assets/Assets NPC's/NPCs/Bibliotecaria/pulando_direita_01.png"
+dest_files=["res://.godot/imported/pulando_direita_01.png-7ef5e070d64de0590ec63605ad0d517f.ctex"]
 
 [params]
 

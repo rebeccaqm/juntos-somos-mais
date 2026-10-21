@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://dcwpo5ulkhj1j"]
+
+[ext_resource type="Texture2D" uid="uid://cfs13i65y24r1" path="res://Assets/Assets NPC's/NPCs/Bibliotecaria/parado_esquerda_00.png" id="1_jwedp"]
+[ext_resource type="Script" uid="uid://nx30ynv4qkc6" path="res://Cenas/npc_2.gd" id="1_m0cce"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r1pbo"]
+size = Vector2(38, 93)
+
+[node name="NPC2" type="Area2D" unique_id=771855245]
+script = ExtResource("1_m0cce")
+
+[node name="DonaMarta" type="Sprite2D" parent="." unique_id=445332709]
+scale = Vector2(1.3125, 1.34375)
+texture = ExtResource("1_jwedp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=829196775]
+position = Vector2(-3, 11.5)
+shape = SubResource("RectangleShape2D_r1pbo")
