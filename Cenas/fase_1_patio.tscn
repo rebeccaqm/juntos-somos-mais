@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://lrgru24i8dkg"]
+
+[ext_resource type="Texture2D" uid="uid://cwsmi8ojsssss" path="res://Assets/Background & Coletáveis/Background & Coletáveis/School Hallway.png" id="1_iaxvs"]
+[ext_resource type="PackedScene" uid="uid://bhtor5k1cjwnh" path="res://Cenas/menina.tscn" id="2_u546g"]
+[ext_resource type="PackedScene" uid="uid://1iotk2isge33" path="res://Cenas/menino.tscn" id="3_u315d"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_r1pbo"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_i3cru"]
+normal = Vector2(1, 0)
+distance = -1.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i3cru"]
+size = Vector2(67, 88)
+
+[node name="Fase1_Patio" type="Node2D" unique_id=1484202973]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=213396848]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1032073410]
+position = Vector2(578, 330)
+
+[node name="SchoolHallway" type="Sprite2D" parent="." unique_id=1374503250]
+position = Vector2(1279, 360)
+scale = Vector2(1.1749539, 1)
+texture = ExtResource("1_iaxvs")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1007533231]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1027702156]
+position = Vector2(96, 632)
+shape = SubResource("WorldBoundaryShape2D_r1pbo")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=376611641]
+position = Vector2(1, 453)
+shape = SubResource("WorldBoundaryShape2D_i3cru")
+
+[node name="Menina" parent="." unique_id=543179222 instance=ExtResource("2_u546g")]
+position = Vector2(87, 482)
+
+[node name="Menino" parent="." unique_id=1491382596 instance=ExtResource("3_u315d")]
+position = Vector2(201, 485)
+
+[node name="Area2D" type="Area2D" parent="." unique_id=762873540]
+position = Vector2(1914, 540)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=2140903600]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_i3cru")

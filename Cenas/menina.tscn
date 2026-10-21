@@ -1,0 +1,81 @@
+[gd_scene format=3 uid="uid://bhtor5k1cjwnh"]
+
+[ext_resource type="Script" uid="uid://weiir2516ts0" path="res://Cenas/menina.gd" id="1_3v7rn"]
+[ext_resource type="Texture2D" uid="uid://blcfiam2n21xk" path="res://Assets/Personagens principais/Personagens principais/Jogador2/Movimento/Personagem2-Direita/00_Personagem2-Direita.png" id="1_ney5m"]
+[ext_resource type="Texture2D" uid="uid://fvvsrhrby1sp" path="res://Assets/Personagens principais/Personagens principais/Jogador2/Movimento/Jogador2-Pulo/00_Jogador2-Pulo.png" id="2_3v7rn"]
+[ext_resource type="Texture2D" uid="uid://c4kslyrrd66n" path="res://Assets/Personagens principais/Personagens principais/Jogador2/Movimento/Jogador2-Pulo/01_Jogador2-Pulo.png" id="3_blx38"]
+[ext_resource type="Texture2D" uid="uid://b5fnwvq63dx4w" path="res://Assets/Personagens principais/Personagens principais/Jogador2/Movimento/Jogador2-Pulo/02_Jogador2-Pulo.png" id="4_dfbhp"]
+[ext_resource type="Texture2D" uid="uid://bmjmnf5teqilf" path="res://Assets/Personagens principais/Personagens principais/Jogador2/Movimento/Jogador2-Pulo/03_Jogador2-Pulo.png" id="5_mb5dn"]
+[ext_resource type="Texture2D" uid="uid://cjtwrbrxlavvt" path="res://Assets/Personagens principais/Personagens principais/Jogador2/Movimento/Jogador2-Pulo/04_Jogador2-Pulo.png" id="6_janmm"]
+[ext_resource type="Texture2D" uid="uid://bymdn4uraa33r" path="res://Assets/Personagens principais/Personagens principais/Jogador2/Movimento/Jogador2-Pulo/05_Jogador2-Pulo.png" id="7_mu5o4"]
+[ext_resource type="Texture2D" uid="uid://dhowla0hvwblq" path="res://Assets/Personagens principais/Personagens principais/Jogador2/Movimento/Personagem2-Direita/01_Personagem2-Direita.png" id="8_xm6g4"]
+[ext_resource type="Texture2D" uid="uid://23roq4j2njvc" path="res://Assets/Personagens principais/Personagens principais/Jogador2/Movimento/Personagem2-Direita/02_Personagem2-Direita.png" id="9_u4o5t"]
+[ext_resource type="Texture2D" uid="uid://ba4ju82n4dj8u" path="res://Assets/Personagens principais/Personagens principais/Jogador2/Movimento/Personagem2-Direita/03_Personagem2-Direita.png" id="10_d7tam"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_r1pbo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_ney5m")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_3v7rn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_blx38")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_dfbhp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_mb5dn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_janmm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_mu5o4")
+}],
+"loop": 1,
+"name": &"jump",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_ney5m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_xm6g4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_u4o5t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_d7tam")
+}],
+"loop": 1,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i3cru"]
+size = Vector2(48, 116)
+
+[node name="Menina" type="CharacterBody2D" unique_id=543179222]
+script = ExtResource("1_3v7rn")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1382476481]
+position = Vector2(63, 58)
+scale = Vector2(0.61705685, 0.6304348)
+sprite_frames = SubResource("SpriteFrames_r1pbo")
+animation = &"jump"
+frame_progress = 0.46897596
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1051979476]
+position = Vector2(67, 84)
+shape = SubResource("RectangleShape2D_i3cru")

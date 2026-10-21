@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b27cvkhega8ul"
-path="res://.godot/imported/fantasma desanimo 2.jpg-1365418dce7cab87340a471f1a72727b.ctex"
+uid="uid://bmjmnf5teqilf"
+path="res://.godot/imported/03_Jogador2-Pulo.png-27e37591c7405ddb60655471a23c360a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Boss/fantasma desanimo 2.jpg"
-dest_files=["res://.godot/imported/fantasma desanimo 2.jpg-1365418dce7cab87340a471f1a72727b.ctex"]
+source_file="res://Assets/Personagens principais/Personagens principais/Jogador2/Movimento/Jogador2-Pulo/03_Jogador2-Pulo.png"
+dest_files=["res://.godot/imported/03_Jogador2-Pulo.png-27e37591c7405ddb60655471a23c360a.ctex"]
 
 [params]
 

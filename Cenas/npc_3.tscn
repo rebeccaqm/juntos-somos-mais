@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://chkpglrh0ftfx"]
+
+[ext_resource type="Script" uid="uid://d01hbpt02dp2s" path="res://Cenas/npc_3.gd" id="1_b3bxc"]
+[ext_resource type="Texture2D" uid="uid://3a03r0f1mqxp" path="res://Assets/Assets NPC's/NPCs/Merendeira/parado_esquerda_01.png" id="1_hp4ny"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r1pbo"]
+size = Vector2(39, 83)
+
+[node name="NPC3" type="Area2D" unique_id=640200815]
+script = ExtResource("1_b3bxc")
+
+[node name="DonaRosa" type="Sprite2D" parent="." unique_id=1656068126]
+scale = Vector2(1.2395834, 1.2083333)
+texture = ExtResource("1_hp4ny")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1729253496]
+position = Vector2(-1.5, 11.5)
+shape = SubResource("RectangleShape2D_r1pbo")

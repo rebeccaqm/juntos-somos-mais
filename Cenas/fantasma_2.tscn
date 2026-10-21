@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://ba32uq5oy4v0t"]
+
+[ext_resource type="Script" uid="uid://1fsaxk5n8p60" path="res://Cenas/fantasma_2.gd" id="1_cu7lq"]
+[ext_resource type="Texture2D" uid="uid://36m3kcwvucvq" path="res://Assets/Boss/fantasminha2.png" id="1_xua6e"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r1pbo"]
+size = Vector2(246, 263)
+
+[node name="Fantasma2" type="CharacterBody2D" unique_id=1771674394]
+script = ExtResource("1_cu7lq")
+
+[node name="Fantasminha2" type="Sprite2D" parent="." unique_id=88066801]
+texture = ExtResource("1_xua6e")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=426342975]
+position = Vector2(-26, -44.5)
+shape = SubResource("RectangleShape2D_r1pbo")

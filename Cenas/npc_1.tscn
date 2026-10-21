@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://bn7qe5cxsky3a"]
+
+[ext_resource type="Script" uid="uid://de0sun26qyjth" path="res://npc_1.gd" id="1_y5qe7"]
+[ext_resource type="Texture2D" uid="uid://dkqbs12h35v4b" path="res://Assets/Assets NPC's/NPCs/Zelador/parado_esquerda_00.png" id="2_tkbrt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r1pbo"]
+size = Vector2(23, 45)
+
+[node name="NPC1" type="Area2D" unique_id=1210055303]
+script = ExtResource("1_y5qe7")
+
+[node name="SeuZé" type="Sprite2D" parent="." unique_id=687540460]
+scale = Vector2(0.6979167, 0.6770833)
+texture = ExtResource("2_tkbrt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=474593480]
+position = Vector2(0, 6)
+shape = SubResource("RectangleShape2D_r1pbo")
