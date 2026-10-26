@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://lrgru24i8dkg"]
 
+[ext_resource type="Script" uid="uid://c8twshcmdk3t" path="res://Cenas/fase_1_corredor.gd" id="1_7ia1q"]
 [ext_resource type="Texture2D" uid="uid://cwsmi8ojsssss" path="res://Assets/Background & Coletáveis/Background & Coletáveis/School Hallway.png" id="1_wwelv"]
 [ext_resource type="PackedScene" uid="uid://bhtor5k1cjwnh" path="res://Cenas/menina.tscn" id="2_fe5rr"]
 [ext_resource type="PackedScene" uid="uid://1iotk2isge33" path="res://Cenas/menino.tscn" id="3_7ia1q"]
@@ -15,6 +16,7 @@ distance = -1.0
 size = Vector2(67, 88)
 
 [node name="Fase1_Corredor" type="Node2D" unique_id=1484202973]
+script = ExtResource("1_7ia1q")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=213396848]
 

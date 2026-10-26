@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bh7wipq472bio"]
 
 [ext_resource type="Texture2D" uid="uid://c6watl05e6vf2" path="res://Assets/Background & Coletáveis/Background & Coletáveis/patio.jpeg" id="1_iaxvs"]
+[ext_resource type="Script" uid="uid://hf6wfb5y0qn7" path="res://Cenas/fase_1_patio.gd" id="1_otujp"]
 [ext_resource type="Script" uid="uid://bt0evpogb71np" path="res://Cenas/porta_1.gd" id="2_dyua6"]
 [ext_resource type="Script" uid="uid://ba04njjrn0c73" path="res://Cenas/papel.gd" id="2_u315d"]
 [ext_resource type="PackedScene" uid="uid://bhtor5k1cjwnh" path="res://Cenas/menina.tscn" id="2_u546g"]
@@ -77,6 +78,7 @@ size = Vector2(18, 21.5)
 size = Vector2(18.5, 14.0625)
 
 [node name="Fase1_Patio" type="Node2D" unique_id=450313606]
+script = ExtResource("1_otujp")
 
 [node name="Patio" type="Sprite2D" parent="." unique_id=1282205667]
 position = Vector2(795, 326)

@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bm7x32kho6pid"]
 
 [ext_resource type="Texture2D" uid="uid://c8sivgbtc4rtr" path="res://Assets/Background & Coletáveis/Background & Coletáveis/cantina.jpeg" id="1_13g3t"]
+[ext_resource type="Script" uid="uid://dn0pailnpr263" path="res://Cenas/fase_3_cantina.gd" id="1_p80tr"]
 [ext_resource type="PackedScene" uid="uid://1iotk2isge33" path="res://Cenas/menino.tscn" id="2_6tc0b"]
 [ext_resource type="PackedScene" uid="uid://bhtor5k1cjwnh" path="res://Cenas/menina.tscn" id="3_eshng"]
 [ext_resource type="Script" uid="uid://2f705876pfg4" path="res://Cenas/comida.gd" id="4_14rh1"]
@@ -9,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://dow6rlj2l3dm4" path="res://Assets/Lixo, Livro e Comida/pretzel.png" id="7_bble0"]
 [ext_resource type="Texture2D" uid="uid://bmicvibxy5vg7" path="res://Assets/Lixo, Livro e Comida/pudim.png" id="8_p80tr"]
 [ext_resource type="PackedScene" uid="uid://chkpglrh0ftfx" path="res://Cenas/npc_3.tscn" id="9_bble0"]
+[ext_resource type="Script" uid="uid://bxlegvl8ub1wv" path="res://Cenas/porta_3.gd" id="10_0u7vh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r1pbo"]
 size = Vector2(94.25, 11)
@@ -104,6 +106,7 @@ size = Vector2(17.5, 16)
 radius = 23.021729
 
 [node name="Fase3_Cantina" type="Node2D" unique_id=1347015118]
+script = ExtResource("1_p80tr")
 
 [node name="Cantina" type="Sprite2D" parent="." unique_id=166222263]
 position = Vector2(577, 324.25)
@@ -358,6 +361,7 @@ position = Vector2(1053.5037, 286.78598)
 shape = SubResource("RectangleShape2D_yuyqp")
 
 [node name="Porta3" type="Area2D" parent="." unique_id=40249634]
+script = ExtResource("10_0u7vh")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Porta3" unique_id=430861597]
 position = Vector2(1126, 582)

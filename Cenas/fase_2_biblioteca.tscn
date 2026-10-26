@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bpp3ghsb6uc6h"]
 
 [ext_resource type="Texture2D" uid="uid://fu4rs6i0x5qg" path="res://Assets/Background & Coletáveis/Background & Coletáveis/biblioteca.jpeg" id="1_di0g1"]
+[ext_resource type="Script" uid="uid://dnlrjsbdqkd6h" path="res://Cenas/fase_2_biblioteca.gd" id="1_hg3ge"]
 [ext_resource type="PackedScene" uid="uid://bhtor5k1cjwnh" path="res://Cenas/menina.tscn" id="2_aw4sv"]
 [ext_resource type="PackedScene" uid="uid://1iotk2isge33" path="res://Cenas/menino.tscn" id="3_msy6y"]
 [ext_resource type="Script" uid="uid://7b34s281v445" path="res://Cenas/livro.gd" id="4_l4kyg"]
@@ -86,6 +87,7 @@ size = Vector2(196, 10)
 radius = 41.04875
 
 [node name="Fase2_Biblioteca" type="Node2D" unique_id=2033929671]
+script = ExtResource("1_hg3ge")
 
 [node name="Biblioteca" type="Sprite2D" parent="." unique_id=1435655179]
 position = Vector2(578.5, 324.99997)
