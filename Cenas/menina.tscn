@@ -73,9 +73,12 @@ script = ExtResource("1_3v7rn")
 position = Vector2(63, 58)
 scale = Vector2(0.61705685, 0.6304348)
 sprite_frames = SubResource("SpriteFrames_r1pbo")
-animation = &"jump"
-frame_progress = 0.46897596
+animation = &"walk"
+frame = 3
+frame_progress = 0.17191808
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1051979476]
 position = Vector2(67, 84)
 shape = SubResource("RectangleShape2D_i3cru")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1546389799]
