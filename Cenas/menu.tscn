@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://daawigpo3khyd"]
 
-[ext_resource type="Texture2D" path="res://Assets/Background & Coletáveis/Background & Coletáveis/menu2.png" id="1_vpgfy"]
+[ext_resource type="Script" uid="uid://cugg3nkg0pelf" path="res://Cenas/menu.gd" id="1_eheat"]
+[ext_resource type="Texture2D" uid="uid://dpgelwfycvrn1" path="res://Assets/Background & Coletáveis/Background & Coletáveis/menu2.png" id="1_vpgfy"]
 [ext_resource type="FontFile" uid="uid://gxiv871g3qk8" path="res://Assets/Fontes/PixelifySans-SemiBold.ttf" id="2_eheat"]
 [ext_resource type="FontFile" uid="uid://c73vfullbaprv" path="res://Assets/Fontes/PixelifySans-Medium.ttf" id="3_fapvr"]
 
@@ -11,6 +12,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_eheat")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1743342971]
 position = Vector2(576, 320.5)
@@ -62,3 +64,6 @@ layout_mode = 2
 theme_override_fonts/font = ExtResource("3_fapvr")
 theme_override_font_sizes/font_size = 30
 text = "QUIT"
+
+[connection signal="pressed" from="VBoxContainer/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_quit_pressed"]
