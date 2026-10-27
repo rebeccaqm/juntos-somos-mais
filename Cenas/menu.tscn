@@ -1,6 +1,6 @@
-[gd_scene format=3 uid="uid://dylhffoyneolt"]
+[gd_scene format=3 uid="uid://daawigpo3khyd"]
 
-[ext_resource type="Texture2D" uid="uid://dpgelwfycvrn1" path="res://Assets/Background & Coletáveis/Background & Coletáveis/menu2.png" id="1_vpgfy"]
+[ext_resource type="Texture2D" path="res://Assets/Background & Coletáveis/Background & Coletáveis/menu2.png" id="1_vpgfy"]
 [ext_resource type="FontFile" uid="uid://gxiv871g3qk8" path="res://Assets/Fontes/PixelifySans-SemiBold.ttf" id="2_eheat"]
 [ext_resource type="FontFile" uid="uid://c73vfullbaprv" path="res://Assets/Fontes/PixelifySans-Medium.ttf" id="3_fapvr"]
 
