@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://bd4dv6lp3ll8m" path="res://Assets/Lixo, Livro e Comida/livros1-remove.png" id="4_msy6y"]
 [ext_resource type="Script" uid="uid://d0lnrxgtac4g0" path="res://Cenas/porta_2.gd" id="6_p5tpj"]
 [ext_resource type="PackedScene" uid="uid://dcwpo5ulkhj1j" path="res://Cenas/npc_2.tscn" id="7_dhuqm"]
+[ext_resource type="PackedScene" uid="uid://i7vgiqh3ngpu" path="res://Cenas/hud.tscn" id="9_wvyxx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r1pbo"]
 size = Vector2(281.5, 19)
@@ -309,3 +310,10 @@ shape = SubResource("CircleShape2D_r1pbo")
 [node name="NPC2" parent="." unique_id=771855245 instance=ExtResource("7_dhuqm")]
 position = Vector2(253, 107)
 scale = Vector2(0.8, 0.8)
+
+[node name="Timer" type="Timer" parent="." unique_id=890555651]
+autostart = true
+
+[node name="HUD" parent="." unique_id=556092161 instance=ExtResource("9_wvyxx")]
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

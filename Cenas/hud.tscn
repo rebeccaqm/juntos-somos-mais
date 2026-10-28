@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://i7vgiqh3ngpu"]
+
+[sub_resource type="GDScript" id="GDScript_o4l0v"]
+script/source = "extends Control
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+"
+
+[node name="HUD" type="Control" unique_id=556092161]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = SubResource("GDScript_o4l0v")
+
+[node name="Tempo" type="Label" parent="." unique_id=1376080609]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="ItensColetados" type="Label" parent="." unique_id=55769801]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="Label3" type="Label" parent="." unique_id=84638745]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
