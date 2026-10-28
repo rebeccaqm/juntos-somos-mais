@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://bbi71104y1euw" path="res://Assets/Background & Coletáveis/Background & Coletáveis/Trash Bottle.png" id="4_e8ghb"]
 [ext_resource type="Script" uid="uid://det2ogscttepw" path="res://Cenas/garrafa.gd" id="4_lm5gq"]
 [ext_resource type="PackedScene" uid="uid://bn7qe5cxsky3a" path="res://Cenas/npc_1.tscn" id="9_7bhjq"]
+[ext_resource type="Script" uid="uid://p5gsnvs0bo0f" path="res://Cenas/teleporte_patio.gd" id="11_h2osp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r1pbo"]
 size = Vector2(458.6875, 17.25)
@@ -39,7 +40,7 @@ size = Vector2(844, 17.5)
 size = Vector2(161, 22)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_388x1"]
-size = Vector2(52, 30.375)
+size = Vector2(52, 44)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x2qsg"]
 size = Vector2(246, 32)
@@ -76,6 +77,9 @@ size = Vector2(18, 21.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lr4vr"]
 size = Vector2(18.5, 14.0625)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
+size = Vector2(56, 195)
 
 [node name="Fase1_Patio" type="Node2D" unique_id=450313606]
 script = ExtResource("1_otujp")
@@ -125,7 +129,7 @@ position = Vector2(1506, 224)
 shape = SubResource("RectangleShape2D_wnddu")
 
 [node name="CollisionShape2D10" type="CollisionShape2D" parent="ChaoFisico" unique_id=1151523783]
-position = Vector2(1410, 184.1875)
+position = Vector2(1410, 191)
 shape = SubResource("RectangleShape2D_388x1")
 
 [node name="CollisionShape2D11" type="CollisionShape2D" parent="ChaoFisico" unique_id=929237726]
@@ -277,7 +281,7 @@ position = Vector2(724.75, 583.53125)
 shape = SubResource("RectangleShape2D_lr4vr")
 
 [node name="Menina" parent="." unique_id=543179222 instance=ExtResource("2_u546g")]
-position = Vector2(-2, 97)
+position = Vector2(3, 92)
 scale = Vector2(0.5, 0.5)
 
 [node name="Menino" parent="." unique_id=1491382596 instance=ExtResource("3_u315d")]
@@ -287,3 +291,12 @@ scale = Vector2(0.5, 0.5)
 [node name="NPC1" parent="." unique_id=1210055303 instance=ExtResource("9_7bhjq")]
 position = Vector2(246.00002, 122)
 scale = Vector2(1.5, 1.5)
+
+[node name="Teleporte" type="Area2D" parent="." unique_id=1810999432]
+script = ExtResource("11_h2osp")
+
+[node name="colisaotp" type="CollisionShape2D" parent="Teleporte" unique_id=95112982]
+position = Vector2(1611, 112.5)
+shape = SubResource("RectangleShape2D_g4v7s")
+
+[connection signal="body_entered" from="Teleporte" to="." method="_on_teleporte_body_entered"]

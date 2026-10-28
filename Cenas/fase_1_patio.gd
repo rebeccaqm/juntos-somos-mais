@@ -11,7 +11,14 @@ func _ready() -> void:
 	pass
 
 
+
 func concluir_tarefa() -> void:
 	tarefas_concluidas += 1
 	#if tarefas_concluidas >= tarefas_para_liberar_portal:
 		#portal.ativar()
+
+
+#teleporte
+
+	
+	
