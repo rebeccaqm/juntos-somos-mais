@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://bbi71104y1euw" path="res://Assets/Background & Coletáveis/Background & Coletáveis/Trash Bottle.png" id="4_e8ghb"]
 [ext_resource type="Script" uid="uid://det2ogscttepw" path="res://Cenas/garrafa.gd" id="4_lm5gq"]
 [ext_resource type="PackedScene" uid="uid://bn7qe5cxsky3a" path="res://Cenas/npc_1.tscn" id="9_7bhjq"]
+[ext_resource type="PackedScene" uid="uid://i7vgiqh3ngpu" path="res://Cenas/hud.tscn" id="11_h2osp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r1pbo"]
 size = Vector2(458.6875, 17.25)
@@ -289,5 +290,7 @@ position = Vector2(246.00002, 122)
 scale = Vector2(1.5, 1.5)
 
 [node name="Timer" type="Timer" parent="." unique_id=1999384826]
+
+[node name="HUD" parent="." unique_id=556092161 instance=ExtResource("11_h2osp")]
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
