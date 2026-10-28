@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://cfrlivab140m7"]
 
+[ext_resource type="Script" uid="uid://bnralpeagpuoc" path="res://Cenas/boss.gd" id="1_1xof2"]
 [ext_resource type="Texture2D" uid="uid://cgpeuxx3wjt12" path="res://Assets/Boss/slime_frames_all.png" id="1_c7w6l"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1xof2"]
@@ -145,17 +146,17 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cqlss"]
-size = Vector2(3289, 2044)
+size = Vector2(3032, 2195)
 
 [node name="Boss" type="CharacterBody2D" unique_id=5264430]
+script = ExtResource("1_1xof2")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1103894748]
 scale = Vector2(203.35634, 168.87437)
 sprite_frames = SubResource("SpriteFrames_r1pbo")
-animation = &"idle"
+animation = &"walk"
 autoplay = "idle"
-frame_progress = 0.05135683
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=191397182]
-position = Vector2(-128.5, -1167)
+position = Vector2(-52, -1103.5)
 shape = SubResource("RectangleShape2D_cqlss")

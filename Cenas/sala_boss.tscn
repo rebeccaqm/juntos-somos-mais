@@ -1,0 +1,72 @@
+[gd_scene format=3 uid="uid://dffrt6vxrvw37"]
+
+[ext_resource type="Texture2D" uid="uid://dnk5w5phwrvcv" path="res://Assets/Boss/SalaBoss.jpg" id="1_cersd"]
+[ext_resource type="PackedScene" uid="uid://cfrlivab140m7" path="res://Cenas/boss.tscn" id="2_7ael8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ajtct"]
+size = Vector2(9.239806, 127.98532)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
+size = Vector2(964, 24)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yf5fn"]
+size = Vector2(89, 40)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_57qmd"]
+size = Vector2(95, 36)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d0u6y"]
+size = Vector2(106, 36)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3gngh"]
+size = Vector2(191, 36.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fcnqv"]
+size = Vector2(104, 36)
+
+[node name="Sala_Boss" type="Node2D" unique_id=923188775]
+
+[node name="Backgorund" type="Sprite2D" parent="." unique_id=2647479]
+position = Vector2(576, 324)
+scale = Vector2(0.6493799, 0.73055243)
+texture = ExtResource("1_cersd")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=707958563]
+
+[node name="Lateral" type="CollisionShape2D" parent="StaticBody2D" unique_id=1815986246]
+position = Vector2(2.999939, 495.75)
+scale = Vector2(0.6493799, 0.7305525)
+shape = SubResource("RectangleShape2D_ajtct")
+
+[node name="Lateral2" type="CollisionShape2D" parent="StaticBody2D" unique_id=1928873518]
+position = Vector2(1148, 496)
+scale = Vector2(0.6493799, 0.7305525)
+shape = SubResource("RectangleShape2D_ajtct")
+
+[node name="Chão principal" type="CollisionShape2D" parent="StaticBody2D" unique_id=1854993969]
+position = Vector2(573, 590)
+shape = SubResource("RectangleShape2D_g4v7s")
+
+[node name="Secundário" type="CollisionShape2D" parent="StaticBody2D" unique_id=1847847287]
+position = Vector2(44.5, 562)
+shape = SubResource("RectangleShape2D_yf5fn")
+
+[node name="Secundario2" type="CollisionShape2D" parent="StaticBody2D" unique_id=761818329]
+position = Vector2(1104.5, 561)
+shape = SubResource("RectangleShape2D_57qmd")
+
+[node name="Plataforma1" type="CollisionShape2D" parent="StaticBody2D" unique_id=536332015]
+position = Vector2(333, 394)
+shape = SubResource("RectangleShape2D_d0u6y")
+
+[node name="Plataforma2" type="CollisionShape2D" parent="StaticBody2D" unique_id=697125393]
+position = Vector2(573.5, 394.75)
+shape = SubResource("RectangleShape2D_3gngh")
+
+[node name="Plataforma3" type="CollisionShape2D" parent="StaticBody2D" unique_id=1557177085]
+position = Vector2(821, 394)
+shape = SubResource("RectangleShape2D_fcnqv")
+
+[node name="Boss" parent="." unique_id=5264430 instance=ExtResource("2_7ael8")]
+position = Vector2(52, 541)
+scale = Vector2(0.02, 0.02)

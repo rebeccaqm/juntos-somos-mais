@@ -40,7 +40,7 @@ size = Vector2(844, 17.5)
 size = Vector2(161, 22)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_388x1"]
-size = Vector2(52, 30.375)
+size = Vector2(52, 44)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x2qsg"]
 size = Vector2(246, 32)
@@ -77,6 +77,9 @@ size = Vector2(18, 21.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lr4vr"]
 size = Vector2(18.5, 14.0625)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
+size = Vector2(56, 195)
 
 [node name="Fase1_Patio" type="Node2D" unique_id=450313606]
 script = ExtResource("1_otujp")
@@ -126,7 +129,7 @@ position = Vector2(1506, 224)
 shape = SubResource("RectangleShape2D_wnddu")
 
 [node name="CollisionShape2D10" type="CollisionShape2D" parent="ChaoFisico" unique_id=1151523783]
-position = Vector2(1410, 184.1875)
+position = Vector2(1410, 191)
 shape = SubResource("RectangleShape2D_388x1")
 
 [node name="CollisionShape2D11" type="CollisionShape2D" parent="ChaoFisico" unique_id=929237726]
@@ -278,7 +281,7 @@ position = Vector2(724.75, 583.53125)
 shape = SubResource("RectangleShape2D_lr4vr")
 
 [node name="Menina" parent="." unique_id=543179222 instance=ExtResource("2_u546g")]
-position = Vector2(-2, 97)
+position = Vector2(3, 92)
 scale = Vector2(0.5, 0.5)
 
 [node name="Menino" parent="." unique_id=1491382596 instance=ExtResource("3_u315d")]
