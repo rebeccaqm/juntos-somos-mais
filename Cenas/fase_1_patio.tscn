@@ -11,6 +11,7 @@
 [ext_resource type="Script" uid="uid://det2ogscttepw" path="res://Cenas/garrafa.gd" id="4_lm5gq"]
 [ext_resource type="PackedScene" uid="uid://bn7qe5cxsky3a" path="res://Cenas/npc_1.tscn" id="9_7bhjq"]
 [ext_resource type="PackedScene" uid="uid://i7vgiqh3ngpu" path="res://Cenas/hud.tscn" id="11_h2osp"]
+[ext_resource type="Script" uid="uid://p5gsnvs0bo0f" path="res://Cenas/teleporte_patio.gd" id="12_fdw74"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r1pbo"]
 size = Vector2(458.6875, 17.25)
@@ -79,7 +80,7 @@ size = Vector2(18, 21.5)
 size = Vector2(18.5, 14.0625)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
-size = Vector2(56, 195)
+size = Vector2(48.5, 188.25)
 
 [node name="Fase1_Patio" type="Node2D" unique_id=450313606]
 script = ExtResource("1_otujp")
@@ -297,4 +298,12 @@ autostart = true
 
 [node name="HUD" parent="." unique_id=556092161 instance=ExtResource("11_h2osp")]
 
+[node name="Teleporte" type="Area2D" parent="." unique_id=342592371]
+script = ExtResource("12_fdw74")
+
+[node name="tp" type="CollisionShape2D" parent="Teleporte" unique_id=284295809]
+position = Vector2(1598.75, 112.125)
+shape = SubResource("RectangleShape2D_g4v7s")
+
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="body_entered" from="Teleporte" to="." method="_on_teleporte_body_entered"]

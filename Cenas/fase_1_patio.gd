@@ -24,3 +24,7 @@ func _on_timer_timeout() -> void:
 	if tempo == 0:
 		$Timer.stop()
 		#get_tree().call_deferred("change_scene_to_file",[telagameover])
+
+
+func _on_teleporte_body_entered(body: Node2D) -> void:
+	pass
