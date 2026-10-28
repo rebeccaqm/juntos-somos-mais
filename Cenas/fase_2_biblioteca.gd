@@ -1,7 +1,7 @@
 extends Node2D
 
 var tarefas_concluidas: int = 0
-@export var tarefas_para_liberar_portal: int = 9
+@export var tarefas_para_liberar_portal: int = 8
 
 @onready var portal: Area2D = $Porta2
 
