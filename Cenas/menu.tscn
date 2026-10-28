@@ -1,0 +1,69 @@
+[gd_scene format=3 uid="uid://dylhffoyneolt"]
+
+[ext_resource type="Script" path="res://Cenas/menu.gd" id="1_eheat"]
+[ext_resource type="Texture2D" path="res://Assets/Background & Coletáveis/Background & Coletáveis/menu2.png" id="1_vpgfy"]
+[ext_resource type="FontFile" uid="uid://gxiv871g3qk8" path="res://Assets/Fontes/PixelifySans-SemiBold.ttf" id="2_eheat"]
+[ext_resource type="FontFile" uid="uid://c73vfullbaprv" path="res://Assets/Fontes/PixelifySans-Medium.ttf" id="3_fapvr"]
+
+[node name="Menu" type="Control" unique_id=49082300]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_eheat")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1743342971]
+position = Vector2(576, 320.5)
+scale = Vector2(0.68540674, 0.685441)
+texture = ExtResource("1_vpgfy")
+
+[node name="Label" type="Label" parent="." unique_id=1914495500]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -287.0
+offset_top = -174.0
+offset_right = 287.0
+offset_bottom = -99.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_eheat")
+theme_override_font_sizes/font_size = 61
+text = "Juntos Somos Mais"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1127568596]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -85.5
+offset_top = -4.0
+offset_right = 85.5
+offset_bottom = 118.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 32
+
+[node name="Play" type="Button" parent="VBoxContainer" unique_id=1078693559]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_fapvr")
+theme_override_font_sizes/font_size = 30
+text = "PLAY"
+
+[node name="Quit" type="Button" parent="VBoxContainer" unique_id=1678834898]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_fapvr")
+theme_override_font_sizes/font_size = 30
+text = "QUIT"
+
+[connection signal="pressed" from="VBoxContainer/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_quit_pressed"]
