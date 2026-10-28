@@ -1,7 +1,7 @@
 extends Node2D
 
 var tarefas_concluidas: int = 0
-@onready var portal: Area2D = $Porta1
+@onready var portal: Area2D = $Porta3
 
 var tempo = 60
 var itenscoletados = 0

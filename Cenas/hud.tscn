@@ -28,7 +28,7 @@ layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
 
-[node name="Label2" type="Label" parent="." unique_id=55769801]
+[node name="ItensColetados" type="Label" parent="." unique_id=55769801]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
