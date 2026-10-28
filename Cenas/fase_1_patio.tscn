@@ -287,3 +287,7 @@ scale = Vector2(0.5, 0.5)
 [node name="NPC1" parent="." unique_id=1210055303 instance=ExtResource("9_7bhjq")]
 position = Vector2(246.00002, 122)
 scale = Vector2(1.5, 1.5)
+
+[node name="Timer" type="Timer" parent="." unique_id=1999384826]
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
