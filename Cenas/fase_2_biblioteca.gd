@@ -1,8 +1,5 @@
 extends Node2D
 
-
-@export var tarefas_para_liberar_portal: int = 1
-
 var tarefas_concluidas: int = 0
 @onready var portal: Area2D = $Porta2
 
@@ -12,6 +9,7 @@ var tempo = 60
 func _ready() -> void:
 	pass
 
+@onready var portal: Area2D = $Porta2
 
 func concluir_tarefa() -> void:
 	tarefas_concluidas += 1
