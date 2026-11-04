@@ -9,6 +9,8 @@
 [ext_resource type="Script" uid="uid://d0lnrxgtac4g0" path="res://Cenas/porta_2.gd" id="6_p5tpj"]
 [ext_resource type="PackedScene" uid="uid://dcwpo5ulkhj1j" path="res://Cenas/npc_2.tscn" id="7_dhuqm"]
 [ext_resource type="PackedScene" uid="uid://i7vgiqh3ngpu" path="res://Cenas/hud.tscn" id="9_wvyxx"]
+[ext_resource type="Script" uid="uid://tjjn4fwmil4y" path="res://Cenas/teleporte_1_ida_biblio.gd" id="10_gou4p"]
+[ext_resource type="Script" uid="uid://c84pg6c1cddbl" path="res://Cenas/teleporte_1_volta_biblio.gd" id="11_ddbe2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r1pbo"]
 size = Vector2(281.5, 19)
@@ -17,7 +19,7 @@ size = Vector2(281.5, 19)
 size = Vector2(221, 20.75)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i3cru"]
-size = Vector2(286, 14.75)
+size = Vector2(288, 14.75)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k7ecr"]
 size = Vector2(136.25, 16)
@@ -82,10 +84,22 @@ size = Vector2(248.27075, 13.586632)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lr4vr"]
 size = Vector2(196, 10)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_57qmd"]
+size = Vector2(20, 375)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d0u6y"]
+size = Vector2(20, 202.5)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_msy6y"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_r1pbo"]
 radius = 41.04875
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
+size = Vector2(20, 144)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yf5fn"]
+size = Vector2(9, 150)
 
 [node name="Fase2_Biblioteca" type="Node2D" unique_id=2033929671]
 script = ExtResource("1_hg3ge")
@@ -101,100 +115,134 @@ metadata/_edit_lock_ = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ChaoFisico" unique_id=58984273]
 position = Vector2(141.25, 166)
 shape = SubResource("RectangleShape2D_r1pbo")
+debug_color = Color(0, 0, 1, 0.41960785)
 
 [node name="CollisionShape2D6" type="CollisionShape2D" parent="ChaoFisico" unique_id=592765447]
 position = Vector2(396.5, 184.625)
 shape = SubResource("RectangleShape2D_dvu1o")
+debug_color = Color(0, 0, 1, 0.41960785)
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="ChaoFisico" unique_id=2041115597]
-position = Vector2(147, 328.625)
+position = Vector2(146, 328.625)
 shape = SubResource("RectangleShape2D_i3cru")
+debug_color = Color(0, 0, 1, 0.41960785)
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="ChaoFisico" unique_id=483961078]
 position = Vector2(619.875, 150)
 shape = SubResource("RectangleShape2D_k7ecr")
+debug_color = Color(0, 0, 1, 0.41960785)
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="ChaoFisico" unique_id=1849413829]
 position = Vector2(764.5, 187)
 shape = SubResource("RectangleShape2D_4svuj")
+debug_color = Color(0, 0, 1, 0.41960785)
 
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="ChaoFisico" unique_id=228939253]
 position = Vector2(890, 169)
 shape = SubResource("RectangleShape2D_p3mgv")
+debug_color = Color(0, 0, 1, 0.41960785)
 
 [node name="CollisionShape2D7" type="CollisionShape2D" parent="ChaoFisico" unique_id=1718991706]
 position = Vector2(1059.75, 187)
 shape = SubResource("RectangleShape2D_cqlss")
+debug_color = Color(0, 0, 1, 0.41960785)
 
 [node name="CollisionShape2D8" type="CollisionShape2D" parent="ChaoFisico" unique_id=740975140]
 position = Vector2(476, 388.5)
 shape = SubResource("RectangleShape2D_h52w5")
+debug_color = Color(0, 0, 1, 0.41960785)
 
 [node name="CollisionShape2D9" type="CollisionShape2D" parent="ChaoFisico" unique_id=1508447064]
 position = Vector2(802, 368.5)
 shape = SubResource("RectangleShape2D_6bkmy")
+debug_color = Color(0, 0, 1, 0.41960785)
 
 [node name="CollisionShape2D10" type="CollisionShape2D" parent="ChaoFisico" unique_id=116164305]
 position = Vector2(55, 582.875)
 shape = SubResource("RectangleShape2D_vc52p")
+debug_color = Color(0, 0, 1, 0.41960785)
 
 [node name="CollisionShape2D11" type="CollisionShape2D" parent="ChaoFisico" unique_id=761378497]
 position = Vector2(208.5, 599.5)
 shape = SubResource("RectangleShape2D_81h3g")
+debug_color = Color(0, 0, 1, 0.41960785)
 
 [node name="CollisionShape2D12" type="CollisionShape2D" parent="ChaoFisico" unique_id=292736224]
 position = Vector2(637, 596.75)
 shape = SubResource("RectangleShape2D_wnddu")
+debug_color = Color(0, 0, 1, 0.41960785)
 
 [node name="CollisionShape2D13" type="CollisionShape2D" parent="ChaoFisico" unique_id=1850879720]
 position = Vector2(367.5, 580.5)
 shape = SubResource("RectangleShape2D_388x1")
+debug_color = Color(0, 0, 1, 0.41960785)
 
 [node name="CollisionShape2D14" type="CollisionShape2D" parent="ChaoFisico" unique_id=1365156548]
 position = Vector2(623.125, 516.25)
 shape = SubResource("RectangleShape2D_x2qsg")
+debug_color = Color(0, 0, 1, 0.41960785)
 
 [node name="CollisionShape2D15" type="CollisionShape2D" parent="ChaoFisico" unique_id=659156344]
 position = Vector2(999.75, 583.25)
 shape = SubResource("RectangleShape2D_un0v8")
+debug_color = Color(0, 0, 1, 0.41960785)
 
 [node name="CollisionShape2D16" type="CollisionShape2D" parent="ChaoFisico" unique_id=532103840]
 position = Vector2(748.5, 536)
 shape = SubResource("RectangleShape2D_7d8dq")
+debug_color = Color(0, 0, 1, 0.41960785)
 
 [node name="CollisionShape2D17" type="CollisionShape2D" parent="ChaoFisico" unique_id=1094238844]
 position = Vector2(296, 339)
 shape = SubResource("RectangleShape2D_qamte")
+debug_color = Color(0, 0, 1, 0.41960785)
 
 [node name="CollisionShape2D18" type="CollisionShape2D" parent="ChaoFisico" unique_id=980248574]
 position = Vector2(307, 346)
 shape = SubResource("RectangleShape2D_j4vi5")
+debug_color = Color(0, 0, 1, 0.41960785)
 
 [node name="CollisionShape2D19" type="CollisionShape2D" parent="ChaoFisico" unique_id=1752677608]
 position = Vector2(314, 357)
 shape = SubResource("RectangleShape2D_2g5bt")
+debug_color = Color(0, 0, 1, 0.41960785)
 
 [node name="CollisionShape2D20" type="CollisionShape2D" parent="ChaoFisico" unique_id=1869647025]
 position = Vector2(316.875, 364.125)
 shape = SubResource("RectangleShape2D_gudib")
+debug_color = Color(0, 0, 1, 0.41960785)
 
 [node name="CollisionShape2D21" type="CollisionShape2D" parent="ChaoFisico" unique_id=1725552918]
 position = Vector2(330, 371)
 shape = SubResource("RectangleShape2D_bmgmx")
+debug_color = Color(0, 0, 1, 0.41960785)
 
 [node name="CollisionShape2D22" type="CollisionShape2D" parent="ChaoFisico" unique_id=999253911]
 position = Vector2(337.8125, 378.5625)
 shape = SubResource("RectangleShape2D_tsitm")
+debug_color = Color(0, 0, 1, 0.41960785)
 
 [node name="CollisionShape2D23" type="CollisionShape2D" parent="ChaoFisico" unique_id=954130154]
 position = Vector2(869.0266, 449.58054)
 rotation = -0.7853982
 scale = Vector2(0.9999999, 0.9999999)
 shape = SubResource("RectangleShape2D_11j8r")
+debug_color = Color(0, 0, 1, 0.41960785)
 
 [node name="CollisionShape2D24" type="CollisionShape2D" parent="ChaoFisico" unique_id=703250756]
 position = Vector2(1058, 366)
 shape = SubResource("RectangleShape2D_lr4vr")
+debug_color = Color(0, 0, 1, 0.41960785)
+
+[node name="CollisionShape2D25" type="CollisionShape2D" parent="ChaoFisico" unique_id=1879584969]
+position = Vector2(1168, 410.5)
+shape = SubResource("RectangleShape2D_57qmd")
+debug_color = Color(0, 0, 1, 0.41960785)
+
+[node name="CollisionShape2D26" type="CollisionShape2D" parent="ChaoFisico" unique_id=717122062]
+position = Vector2(-12, 488.75)
+shape = SubResource("RectangleShape2D_d0u6y")
+debug_color = Color(0, 0, 1, 0.41960785)
 
 [node name="Menina" parent="." unique_id=543179222 instance=ExtResource("2_aw4sv")]
 position = Vector2(6, 85)
@@ -315,5 +363,19 @@ scale = Vector2(0.8, 0.8)
 autostart = true
 
 [node name="HUD" parent="." unique_id=556092161 instance=ExtResource("9_wvyxx")]
+
+[node name="Teleporte1_ida_Biblio" type="Area2D" parent="." unique_id=1174008339]
+script = ExtResource("10_gou4p")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Teleporte1_ida_Biblio" unique_id=45107669]
+position = Vector2(1169, 104)
+shape = SubResource("RectangleShape2D_g4v7s")
+
+[node name="Teleporte1_volta_Biblio" type="Area2D" parent="." unique_id=1869129457]
+script = ExtResource("11_ddbe2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Teleporte1_volta_Biblio" unique_id=156892888]
+position = Vector2(-5.5, 255)
+shape = SubResource("RectangleShape2D_yf5fn")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
