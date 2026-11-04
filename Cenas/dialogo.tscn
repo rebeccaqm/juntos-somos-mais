@@ -1,0 +1,368 @@
+[gd_scene format=3 uid="uid://dmkv7ja6xecik"]
+
+[ext_resource type="Script" uid="uid://8ivvxo7xwg08" path="res://Cenas/dialogo.gd" id="1_script"]
+[ext_resource type="FontFile" uid="uid://bfuqck66r324t" path="res://Assets/Fontes/PixelifySans-Bold.ttf" id="2_bold"]
+[ext_resource type="FontFile" uid="uid://c73vfullbaprv" path="res://Assets/Fontes/PixelifySans-Medium.ttf" id="3_medium"]
+[ext_resource type="Texture2D" uid="uid://bl8hd2bqxeuje" path="res://Assets/HUD/retrato_menino.png" id="4_menino"]
+[ext_resource type="Texture2D" uid="uid://62s1gbvkps82" path="res://Assets/HUD/retrato_menina.png" id="5_menina"]
+
+[sub_resource type="StyleBoxFlat" id="Painel_Menino"]
+content_margin_left = 14.0
+content_margin_top = 10.0
+content_margin_right = 14.0
+content_margin_bottom = 10.0
+bg_color = Color(0.9333, 0.9647, 1, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.2314, 0.5608, 0.8784, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color(0, 0, 0, 0.3)
+shadow_size = 6
+shadow_offset = Vector2(0, 3)
+
+[sub_resource type="StyleBoxFlat" id="Botao_Menino"]
+content_margin_left = 14.0
+content_margin_top = 4.0
+content_margin_right = 14.0
+content_margin_bottom = 4.0
+bg_color = Color(0.2314, 0.5608, 0.8784, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="BotaoPress_Menino"]
+content_margin_left = 14.0
+content_margin_top = 4.0
+content_margin_right = 14.0
+content_margin_bottom = 4.0
+bg_color = Color(0.1647, 0.4549, 0.7529, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="BotaoHover_Menino"]
+content_margin_left = 14.0
+content_margin_top = 4.0
+content_margin_right = 14.0
+content_margin_bottom = 4.0
+bg_color = Color(0.3529, 0.6471, 0.9333, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="Painel_Menina"]
+content_margin_left = 14.0
+content_margin_top = 10.0
+content_margin_right = 14.0
+content_margin_bottom = 10.0
+bg_color = Color(1, 0.9412, 0.9647, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.9098, 0.3216, 0.5608, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color(0, 0, 0, 0.3)
+shadow_size = 6
+shadow_offset = Vector2(0, 3)
+
+[sub_resource type="StyleBoxFlat" id="Botao_Menina"]
+content_margin_left = 14.0
+content_margin_top = 4.0
+content_margin_right = 14.0
+content_margin_bottom = 4.0
+bg_color = Color(0.9098, 0.3216, 0.5608, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="BotaoPress_Menina"]
+content_margin_left = 14.0
+content_margin_top = 4.0
+content_margin_right = 14.0
+content_margin_bottom = 4.0
+bg_color = Color(0.7882, 0.2392, 0.4706, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="BotaoHover_Menina"]
+content_margin_left = 14.0
+content_margin_top = 4.0
+content_margin_right = 14.0
+content_margin_bottom = 4.0
+bg_color = Color(0.949, 0.4627, 0.651, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="Painel_Outros"]
+content_margin_left = 14.0
+content_margin_top = 10.0
+content_margin_right = 14.0
+content_margin_bottom = 10.0
+bg_color = Color(1, 0.9725, 0.902, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.9098, 0.6039, 0.1686, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color(0, 0, 0, 0.3)
+shadow_size = 6
+shadow_offset = Vector2(0, 3)
+
+[sub_resource type="StyleBoxFlat" id="Botao_Outros"]
+content_margin_left = 14.0
+content_margin_top = 4.0
+content_margin_right = 14.0
+content_margin_bottom = 4.0
+bg_color = Color(0.9098, 0.6039, 0.1686, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="BotaoPress_Outros"]
+content_margin_left = 14.0
+content_margin_top = 4.0
+content_margin_right = 14.0
+content_margin_bottom = 4.0
+bg_color = Color(0.7804, 0.4902, 0.0902, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="BotaoHover_Outros"]
+content_margin_left = 14.0
+content_margin_top = 4.0
+content_margin_right = 14.0
+content_margin_bottom = 4.0
+bg_color = Color(0.949, 0.6902, 0.3098, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[node name="Dialogo" type="CanvasLayer" unique_id=1609841428]
+process_mode = 3
+layer = 10
+visible = false
+script = ExtResource("1_script")
+
+[node name="Raiz" type="Control" parent="." unique_id=119567385]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="CaixaMenino" type="PanelContainer" parent="Raiz" unique_id=366011358]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 16.0
+offset_top = -200.0
+offset_right = 556.0
+offset_bottom = -16.0
+grow_vertical = 0
+theme_override_styles/panel = SubResource("Painel_Menino")
+
+[node name="Linha" type="HBoxContainer" parent="Raiz/CaixaMenino" unique_id=1925413112]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="Retrato" type="TextureRect" parent="Raiz/CaixaMenino/Linha" unique_id=1368781657]
+custom_minimum_size = Vector2(112, 112)
+layout_mode = 2
+size_flags_vertical = 4
+texture = ExtResource("4_menino")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Coluna" type="VBoxContainer" parent="Raiz/CaixaMenino/Linha" unique_id=18384262]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 4
+
+[node name="Cabecalho" type="HBoxContainer" parent="Raiz/CaixaMenino/Linha/Coluna" unique_id=75645450]
+layout_mode = 2
+
+[node name="Nome" type="Label" parent="Raiz/CaixaMenino/Linha/Coluna/Cabecalho" unique_id=1488355320]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.1647, 0.4353, 0.7529, 1)
+theme_override_fonts/font = ExtResource("2_bold")
+theme_override_font_sizes/font_size = 26
+text = "Menino"
+
+[node name="Botao" type="Button" parent="Raiz/CaixaMenino/Linha/Coluna/Cabecalho" unique_id=1180550914]
+layout_mode = 2
+focus_mode = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_bold")
+theme_override_font_sizes/font_size = 18
+theme_override_styles/normal = SubResource("Botao_Menino")
+theme_override_styles/pressed = SubResource("BotaoPress_Menino")
+theme_override_styles/hover = SubResource("BotaoHover_Menino")
+text = "Avançar »"
+
+[node name="Texto" type="Label" parent="Raiz/CaixaMenino/Linha/Coluna" unique_id=2055052475]
+custom_minimum_size = Vector2(0, 96)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.17, 0.17, 0.17, 1)
+theme_override_fonts/font = ExtResource("3_medium")
+theme_override_font_sizes/font_size = 21
+autowrap_mode = 3
+
+[node name="CaixaMenina" type="PanelContainer" parent="Raiz" unique_id=525435776]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -556.0
+offset_top = -200.0
+offset_right = -16.0
+offset_bottom = -16.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_styles/panel = SubResource("Painel_Menina")
+
+[node name="Linha" type="HBoxContainer" parent="Raiz/CaixaMenina" unique_id=315513616]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="Retrato" type="TextureRect" parent="Raiz/CaixaMenina/Linha" unique_id=682251347]
+custom_minimum_size = Vector2(112, 112)
+layout_mode = 2
+size_flags_vertical = 4
+texture = ExtResource("5_menina")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Coluna" type="VBoxContainer" parent="Raiz/CaixaMenina/Linha" unique_id=1232178660]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 4
+
+[node name="Cabecalho" type="HBoxContainer" parent="Raiz/CaixaMenina/Linha/Coluna" unique_id=747665433]
+layout_mode = 2
+
+[node name="Nome" type="Label" parent="Raiz/CaixaMenina/Linha/Coluna/Cabecalho" unique_id=313449984]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.8314, 0.2392, 0.4863, 1)
+theme_override_fonts/font = ExtResource("2_bold")
+theme_override_font_sizes/font_size = 26
+text = "Menina"
+
+[node name="Botao" type="Button" parent="Raiz/CaixaMenina/Linha/Coluna/Cabecalho" unique_id=1671462471]
+layout_mode = 2
+focus_mode = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_bold")
+theme_override_font_sizes/font_size = 18
+theme_override_styles/normal = SubResource("Botao_Menina")
+theme_override_styles/pressed = SubResource("BotaoPress_Menina")
+theme_override_styles/hover = SubResource("BotaoHover_Menina")
+text = "Avançar »"
+
+[node name="Texto" type="Label" parent="Raiz/CaixaMenina/Linha/Coluna" unique_id=661019170]
+custom_minimum_size = Vector2(0, 96)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.17, 0.17, 0.17, 1)
+theme_override_fonts/font = ExtResource("3_medium")
+theme_override_font_sizes/font_size = 21
+autowrap_mode = 3
+
+[node name="CaixaOutros" type="PanelContainer" parent="Raiz" unique_id=687648598]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -290.0
+offset_top = -200.0
+offset_right = 290.0
+offset_bottom = -16.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("Painel_Outros")
+
+[node name="Linha" type="HBoxContainer" parent="Raiz/CaixaOutros" unique_id=470371601]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="Retrato" type="TextureRect" parent="Raiz/CaixaOutros/Linha" unique_id=652856940]
+custom_minimum_size = Vector2(112, 112)
+layout_mode = 2
+size_flags_vertical = 4
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Coluna" type="VBoxContainer" parent="Raiz/CaixaOutros/Linha" unique_id=691474556]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 4
+
+[node name="Cabecalho" type="HBoxContainer" parent="Raiz/CaixaOutros/Linha/Coluna" unique_id=1145014245]
+layout_mode = 2
+
+[node name="Nome" type="Label" parent="Raiz/CaixaOutros/Linha/Coluna/Cabecalho" unique_id=333716654]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.7882, 0.4392, 0.102, 1)
+theme_override_fonts/font = ExtResource("2_bold")
+theme_override_font_sizes/font_size = 26
+
+[node name="Botao" type="Button" parent="Raiz/CaixaOutros/Linha/Coluna/Cabecalho" unique_id=401282292]
+layout_mode = 2
+focus_mode = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_bold")
+theme_override_font_sizes/font_size = 18
+theme_override_styles/normal = SubResource("Botao_Outros")
+theme_override_styles/pressed = SubResource("BotaoPress_Outros")
+theme_override_styles/hover = SubResource("BotaoHover_Outros")
+text = "Avançar »"
+
+[node name="Texto" type="Label" parent="Raiz/CaixaOutros/Linha/Coluna" unique_id=805591225]
+custom_minimum_size = Vector2(0, 96)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.17, 0.17, 0.17, 1)
+theme_override_fonts/font = ExtResource("3_medium")
+theme_override_font_sizes/font_size = 21
+autowrap_mode = 3

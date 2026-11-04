@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://chkpglrh0ftfx" path="res://Cenas/npc_3.tscn" id="9_bble0"]
 [ext_resource type="Script" uid="uid://bxlegvl8ub1wv" path="res://Cenas/porta_3.gd" id="10_0u7vh"]
 [ext_resource type="PackedScene" uid="uid://i7vgiqh3ngpu" path="res://Cenas/hud.tscn" id="12_o65gn"]
+[ext_resource type="PackedScene" path="res://Cenas/dialogo.tscn" id="13_6na1w"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r1pbo"]
 size = Vector2(94.25, 62.5)
@@ -450,5 +451,7 @@ shape = SubResource("RectangleShape2D_57qmd")
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="Area2D4" unique_id=1634322362]
 position = Vector2(-24, 498.25)
 shape = SubResource("RectangleShape2D_d0u6y")
+
+[node name="Dialogo" parent="." unique_id=1775294399 instance=ExtResource("13_6na1w")]
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
