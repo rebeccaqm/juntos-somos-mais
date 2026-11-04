@@ -1,5 +1,16 @@
 [gd_scene format=3 uid="uid://i7vgiqh3ngpu"]
 
+[ext_resource type="Texture2D" uid="uid://dyjkeq026kh2p" path="res://Assets/HUD/icone_livro.png" id="1_1pfdj"]
+[ext_resource type="Texture2D" uid="uid://b6vht5evrmgln" path="res://Assets/HUD/painel.png" id="1_kgovw"]
+[ext_resource type="Texture2D" uid="uid://cjytt8pdsmom1" path="res://Assets/HUD/icone_lixo.png" id="2_u6bo7"]
+[ext_resource type="FontFile" uid="uid://bfuqck66r324t" path="res://Assets/Fontes/PixelifySans-Bold.ttf" id="3_5udud"]
+[ext_resource type="Texture2D" uid="uid://d5lo2mm8brum" path="res://Assets/HUD/icone_comida.png" id="3_mdj34"]
+[ext_resource type="Texture2D" uid="uid://hwew6j88pmo3" path="res://Assets/HUD/icone_relogio.png" id="4_vodeq"]
+[ext_resource type="Texture2D" uid="uid://bl8hd2bqxeuje" path="res://Assets/HUD/retrato_menino.png" id="7_nacjj"]
+[ext_resource type="Texture2D" uid="uid://bb5bw817igtmd" path="res://Assets/HUD/coracao_azul_cheio.png" id="8_evudk"]
+[ext_resource type="Texture2D" uid="uid://62s1gbvkps82" path="res://Assets/HUD/retrato_menina.png" id="9_r1c6k"]
+[ext_resource type="Texture2D" uid="uid://sp0d03xqt2ky" path="res://Assets/HUD/coracao_rosa_cheio.png" id="10_devux"]
+
 [sub_resource type="GDScript" id="GDScript_o4l0v"]
 script/source = "extends Control
 
@@ -23,17 +34,184 @@ grow_horizontal = 2
 grow_vertical = 2
 script = SubResource("GDScript_o4l0v")
 
-[node name="Tempo" type="Label" parent="." unique_id=1376080609]
+[node name="PainelPontos" type="NinePatchRect" parent="." unique_id=1644838915]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
+offset_left = 16.0
+offset_top = 12.0
+offset_right = 180.0
+offset_bottom = 72.0
+texture = ExtResource("1_kgovw")
+patch_margin_left = 12
+patch_margin_top = 12
+patch_margin_right = 12
+patch_margin_bottom = 12
 
-[node name="Label2" type="Label" parent="." unique_id=55769801]
+[node name="IconeItemLixo" type="TextureRect" parent="PainelPontos" unique_id=1523573217]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
+offset_left = 12.0
+offset_top = 8.0
+offset_right = 54.0
+offset_bottom = 50.0
+texture = ExtResource("2_u6bo7")
+expand_mode = 1
+stretch_mode = 5
 
-[node name="Label3" type="Label" parent="." unique_id=84638745]
+[node name="IconeItemComida" type="TextureRect" parent="PainelPontos" unique_id=1996169648]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 8.0
+offset_right = 60.0
+offset_bottom = 56.0
+texture = ExtResource("3_mdj34")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="IconeItemLivro" type="TextureRect" parent="PainelPontos" unique_id=653337881]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 6.0
+offset_right = 60.0
+offset_bottom = 54.0
+texture = ExtResource("1_1pfdj")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="ItensColetados" type="Label" parent="PainelPontos" unique_id=55769801]
+layout_mode = 0
+offset_left = 90.0
+offset_top = 10.0
+offset_right = 178.0
+offset_bottom = 58.0
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("3_5udud")
+theme_override_font_sizes/font_size = 32
+text = "0"
+
+[node name="PainelTempo" type="NinePatchRect" parent="." unique_id=109896557]
+layout_mode = 0
+offset_left = 972.0
+offset_top = 12.0
+offset_right = 1136.0
+offset_bottom = 72.0
+texture = ExtResource("1_kgovw")
+patch_margin_left = 12
+patch_margin_top = 12
+patch_margin_right = 12
+patch_margin_bottom = 12
+
+[node name="IconeTempo" type="TextureRect" parent="PainelTempo" unique_id=1070335213]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 6.0
+offset_right = 60.0
+offset_bottom = 54.0
+texture = ExtResource("4_vodeq")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Tempo" type="Label" parent="PainelTempo" unique_id=1376080609]
+layout_mode = 0
+offset_left = 84.0
+offset_top = 10.0
+offset_right = 172.0
+offset_bottom = 58.0
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("3_5udud")
+theme_override_font_sizes/font_size = 32
+text = "60"
+
+[node name="PainelBossMenino" type="NinePatchRect" parent="." unique_id=1024476472]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 12.0
+offset_right = 240.0
+offset_bottom = 84.0
+texture = ExtResource("1_kgovw")
+patch_margin_left = 12
+patch_margin_top = 12
+patch_margin_right = 12
+patch_margin_bottom = 12
+
+[node name="IconeMenino" type="TextureRect" parent="PainelBossMenino" unique_id=2026308026]
 layout_mode = 0
 offset_right = 40.0
-offset_bottom = 23.0
+offset_bottom = 40.0
+texture = ExtResource("7_nacjj")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Corações" type="HBoxContainer" parent="PainelBossMenino" unique_id=1932957378]
+layout_mode = 0
+offset_left = 60.0
+offset_top = 14.0
+offset_right = 200.0
+offset_bottom = 58.0
+
+[node name="Coração1" type="TextureRect" parent="PainelBossMenino/Corações" unique_id=957303806]
+custom_minimum_size = Vector2(44, 44)
+layout_mode = 2
+texture = ExtResource("8_evudk")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Coração2" type="TextureRect" parent="PainelBossMenino/Corações" unique_id=1801172346]
+custom_minimum_size = Vector2(44, 44)
+layout_mode = 2
+texture = ExtResource("8_evudk")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Coração3" type="TextureRect" parent="PainelBossMenino/Corações" unique_id=742981871]
+custom_minimum_size = Vector2(44, 44)
+layout_mode = 2
+texture = ExtResource("8_evudk")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="PainelBossMenina" type="NinePatchRect" parent="." unique_id=2034770644]
+layout_mode = 0
+offset_left = 920.0
+offset_top = 12.0
+offset_right = 1144.0
+offset_bottom = 84.0
+texture = ExtResource("1_kgovw")
+patch_margin_left = 12
+patch_margin_top = 12
+patch_margin_right = 12
+patch_margin_bottom = 12
+
+[node name="IconeMenina" type="TextureRect" parent="PainelBossMenina" unique_id=1162196307]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("9_r1c6k")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Corações" type="HBoxContainer" parent="PainelBossMenina" unique_id=873869509]
+layout_mode = 0
+offset_left = 60.0
+offset_top = 14.0
+offset_right = 200.0
+offset_bottom = 58.0
+
+[node name="Coração1" type="TextureRect" parent="PainelBossMenina/Corações" unique_id=78074442]
+custom_minimum_size = Vector2(44, 44)
+layout_mode = 2
+texture = ExtResource("10_devux")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Coração2" type="TextureRect" parent="PainelBossMenina/Corações" unique_id=1529959876]
+custom_minimum_size = Vector2(44, 44)
+layout_mode = 2
+texture = ExtResource("10_devux")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Coração3" type="TextureRect" parent="PainelBossMenina/Corações" unique_id=2079181142]
+custom_minimum_size = Vector2(44, 44)
+layout_mode = 2
+texture = ExtResource("10_devux")
+expand_mode = 1
+stretch_mode = 5

@@ -312,6 +312,7 @@ position = Vector2(253, 107)
 scale = Vector2(0.8, 0.8)
 
 [node name="Timer" type="Timer" parent="." unique_id=890555651]
+autostart = true
 
 [node name="HUD" parent="." unique_id=556092161 instance=ExtResource("9_wvyxx")]
 

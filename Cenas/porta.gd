@@ -7,16 +7,6 @@ var jogadores_dentro: Array[Node2D] = []
 func _ready() -> void:
 	body_entered.connect(_on_body_entered)
 	body_exited.connect(_on_body_exited)
-	desativar()
-
-func ativar() -> void:
-	visible = true
-	set_deferred("monitoring", true)
-
-func desativar() -> void:
-	visible = false
-	jogadores_dentro.clear()
-	set_deferred("monitoring", false)
 
 func _on_body_entered(body: Node2D) -> void:
 	if body not in jogadores_dentro:
