@@ -10,6 +10,8 @@ var itenscoletados = 0
 func _ready() -> void:
 	$HUD/PainelPontos/IconeItemLixo.visible = false
 	$HUD/PainelPontos/IconeItemLivro.visible = false
+	$HUD/PainelBossMenino.visible = false
+	$HUD/PainelBossMenina.visible = false
 
 func concluir_tarefa() -> void:
 	tarefas_concluidas += 1
