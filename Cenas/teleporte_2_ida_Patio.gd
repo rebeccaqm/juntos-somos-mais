@@ -1,9 +1,10 @@
 extends Area2D
 
-@export var nova_posicao: Vector2 = Vector2(54, 361)
+var nova_posicao: Vector2 = Vector2(30, 533)
 
 func _ready() -> void:
 	body_entered.connect(_ao_entrar)
+
 
 func _ao_entrar(corpo: Node2D) -> void:
 	if corpo is CharacterBody2D:
