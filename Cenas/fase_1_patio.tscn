@@ -11,7 +11,7 @@
 [ext_resource type="Script" uid="uid://det2ogscttepw" path="res://Cenas/garrafa.gd" id="4_lm5gq"]
 [ext_resource type="PackedScene" uid="uid://bn7qe5cxsky3a" path="res://Cenas/npc_1.tscn" id="9_7bhjq"]
 [ext_resource type="PackedScene" uid="uid://i7vgiqh3ngpu" path="res://Cenas/hud.tscn" id="11_h2osp"]
-[ext_resource type="Script" uid="uid://p5gsnvs0bo0f" path="res://Cenas/teleporte_patio.gd" id="12_fdw74"]
+[ext_resource type="Script" path="res://Cenas/teleporte_patio.gd" id="12_fdw74"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r1pbo"]
 size = Vector2(458.6875, 17.25)
