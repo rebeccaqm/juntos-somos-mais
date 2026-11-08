@@ -146,7 +146,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cqlss"]
-size = Vector2(3032, 2195)
+size = Vector2(3137, 2196)
 
 [node name="Boss" type="CharacterBody2D" unique_id=5264430]
 script = ExtResource("1_1xof2")
@@ -158,5 +158,5 @@ animation = &"walk"
 autoplay = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=191397182]
-position = Vector2(-52, -1103.5)
+position = Vector2(35.5, -1071)
 shape = SubResource("RectangleShape2D_cqlss")

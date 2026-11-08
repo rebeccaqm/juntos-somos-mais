@@ -35,3 +35,6 @@ func update_animation(direction: float) -> void:
 		animated_sprite.play("walk")
 	else:
 		animated_sprite.play("idle")
+
+func _ready() -> void:
+	add_to_group("player")
