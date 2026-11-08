@@ -64,7 +64,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i3cru"]
-size = Vector2(48, 116)
+size = Vector2(48, 115)
 
 [node name="Menina" type="CharacterBody2D" unique_id=543179222]
 script = ExtResource("1_3v7rn")
@@ -78,5 +78,5 @@ frame = 3
 frame_progress = 0.17191808
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1051979476]
-position = Vector2(67, 84)
+position = Vector2(67, 83.5)
 shape = SubResource("RectangleShape2D_i3cru")

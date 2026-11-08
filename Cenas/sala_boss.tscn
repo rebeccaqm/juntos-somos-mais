@@ -3,8 +3,6 @@
 [ext_resource type="Script" uid="uid://b7cyxdaecxntl" path="res://Cenas/sala_boss.gd" id="1_ao44i"]
 [ext_resource type="Texture2D" uid="uid://dnk5w5phwrvcv" path="res://Assets/Boss/SalaBoss.jpg" id="1_cersd"]
 [ext_resource type="PackedScene" uid="uid://cfrlivab140m7" path="res://Cenas/boss.tscn" id="2_7ael8"]
-[ext_resource type="PackedScene" uid="uid://1iotk2isge33" path="res://Cenas/menino.tscn" id="3_ib2ge"]
-[ext_resource type="PackedScene" uid="uid://bhtor5k1cjwnh" path="res://Cenas/menina.tscn" id="4_ao44i"]
 [ext_resource type="PackedScene" uid="uid://i7vgiqh3ngpu" path="res://Cenas/hud.tscn" id="5_c12s2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ajtct"]
@@ -73,12 +71,8 @@ position = Vector2(821, 394)
 shape = SubResource("RectangleShape2D_fcnqv")
 
 [node name="Boss" parent="." unique_id=5264430 instance=ExtResource("2_7ael8")]
-position = Vector2(52, 541)
+position = Vector2(49, 542)
 scale = Vector2(0.02, 0.02)
 script = null
-
-[node name="Menino" parent="." unique_id=1491382596 instance=ExtResource("3_ib2ge")]
-
-[node name="Menina" parent="." unique_id=543179222 instance=ExtResource("4_ao44i")]
 
 [node name="HUD" parent="." unique_id=556092161 instance=ExtResource("5_c12s2")]

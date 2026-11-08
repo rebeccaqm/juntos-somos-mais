@@ -45,3 +45,5 @@ func pular() -> void:
 	# Espera o time até o próximo jump
 	await get_tree().create_timer(jump_cooldown).timeout
 	can_jump = true
+	
+	
