@@ -1,0 +1,88 @@
+[gd_scene format=3 uid="uid://djnt5h04sd3bm"]
+
+[ext_resource type="FontFile" uid="uid://c73vfullbaprv" path="res://Assets/Fontes/PixelifySans-Medium.ttf" id="1_q0rai"]
+[ext_resource type="FontFile" uid="uid://bnpyp7w6rh3g5" path="res://Assets/Fontes/PixelifySans-Regular.ttf" id="2_j18o4"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r1pbo"]
+bg_color = Color(0.33333334, 0.3019608, 0.3019608, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i3cru"]
+bg_color = Color(0.33333334, 0.3019608, 0.3019608, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k7ecr"]
+bg_color = Color(0.33333334, 0.3019608, 0.3019608, 1)
+
+[node name="TelaFinal" type="Control" unique_id=473228137]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1658424744]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="LabelMissaoCumprida" type="Label" parent="." unique_id=1054329735]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -368.5
+offset_top = -214.0
+offset_right = 368.5
+offset_bottom = -108.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_q0rai")
+theme_override_font_sizes/font_size = 88
+text = "MISSÃO CUMPRIDA"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1042204637]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = -46.0
+offset_right = 100.0
+offset_bottom = 135.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 32
+
+[node name="Reiniciar" type="Button" parent="VBoxContainer" unique_id=581196528]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_j18o4")
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_r1pbo")
+text = "REINICIAR
+"
+
+[node name="Menu" type="Button" parent="VBoxContainer" unique_id=1284131035]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_j18o4")
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_i3cru")
+text = "MENU
+"
+
+[node name="Sair" type="Button" parent="VBoxContainer" unique_id=26715852]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_j18o4")
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_k7ecr")
+text = "SAIR
+"
