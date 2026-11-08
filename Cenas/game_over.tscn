@@ -1,0 +1,75 @@
+[gd_scene format=3 uid="uid://d1ytfxp6ckchp"]
+
+[ext_resource type="FontFile" uid="uid://bfuqck66r324t" path="res://Assets/Fontes/PixelifySans-Bold.ttf" id="1_7y2ld"]
+[ext_resource type="FontFile" uid="uid://c73vfullbaprv" path="res://Assets/Fontes/PixelifySans-Medium.ttf" id="2_glpug"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i3cru"]
+bg_color = Color(0.33333334, 0.3019608, 0.3019608, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k7ecr"]
+bg_color = Color(0.33333334, 0.3019608, 0.3019608, 1)
+
+[node name="GameOver" type="Control" unique_id=373597851]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=877397458]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="." unique_id=1378811028]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -223.0
+offset_top = -213.5
+offset_right = 223.0
+offset_bottom = -107.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_7y2ld")
+theme_override_font_sizes/font_size = 88
+text = "GAME OVER"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1691813067]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = -61.0
+offset_right = 100.0
+offset_bottom = 61.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 32
+
+[node name="Reiniciar" type="Button" parent="VBoxContainer" unique_id=1784735841]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_glpug")
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_i3cru")
+text = "REINICIAR"
+
+[node name="Menu" type="Button" parent="VBoxContainer" unique_id=506977772]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_glpug")
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_k7ecr")
+text = "MENU"
