@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://d1ytfxp6ckchp"]
 
 [ext_resource type="FontFile" uid="uid://bfuqck66r324t" path="res://Assets/Fontes/PixelifySans-Bold.ttf" id="1_7y2ld"]
+[ext_resource type="Script" uid="uid://b8leew5ik831" path="res://Cenas/game_over.gd" id="1_glpug"]
 [ext_resource type="FontFile" uid="uid://c73vfullbaprv" path="res://Assets/Fontes/PixelifySans-Medium.ttf" id="2_glpug"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i3cru"]
@@ -16,6 +17,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_glpug")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=877397458]
 layout_mode = 1
@@ -73,3 +75,6 @@ theme_override_fonts/font = ExtResource("2_glpug")
 theme_override_font_sizes/font_size = 32
 theme_override_styles/normal = SubResource("StyleBoxFlat_k7ecr")
 text = "MENU"
+
+[connection signal="pressed" from="VBoxContainer/Reiniciar" to="." method="_on_reiniciar_pressed"]
+[connection signal="pressed" from="VBoxContainer/Menu" to="." method="_on_menu_pressed"]

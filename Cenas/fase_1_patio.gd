@@ -19,7 +19,7 @@ func concluir_tarefa() -> void:
 	itenscoletados += 1
 	$HUD/PainelPontos/ItensColetados.text = str (itenscoletados)
 	if tarefas_concluidas == tarefas_para_liberar_portal:
-		#portal.ativar()
+		portal.ativar()
 		$Dialogo.iniciar("patio_limpo")
 
 
@@ -28,7 +28,7 @@ func _on_timer_timeout() -> void:
 	$HUD/PainelTempo/Tempo.text = str (tempo)
 	if tempo == 0:
 		$Timer.stop()
-		#get_tree().call_deferred("change_scene_to_file",[telagameover])
+		get_tree().call_deferred("change_scene_to_file","res://Cenas/game_over.tscn")
 
 
 func _on_teleporte_body_entered(body: Node2D) -> void:
