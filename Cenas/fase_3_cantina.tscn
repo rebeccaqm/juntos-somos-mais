@@ -12,7 +12,12 @@
 [ext_resource type="PackedScene" uid="uid://chkpglrh0ftfx" path="res://Cenas/npc_3.tscn" id="9_bble0"]
 [ext_resource type="Script" uid="uid://bxlegvl8ub1wv" path="res://Cenas/porta_3.gd" id="10_0u7vh"]
 [ext_resource type="PackedScene" uid="uid://i7vgiqh3ngpu" path="res://Cenas/hud.tscn" id="12_o65gn"]
-[ext_resource type="PackedScene" path="res://Cenas/dialogo.tscn" id="13_6na1w"]
+[ext_resource type="PackedScene" uid="uid://dmkv7ja6xecik" path="res://Cenas/dialogo.tscn" id="13_6na1w"]
+[ext_resource type="Script" uid="uid://cbg4jf0weve8i" path="res://Cenas/teleporte_1_ida_cantina.gd" id="13_aff3x"]
+[ext_resource type="Script" uid="uid://dab2p2fsojwbu" path="res://Cenas/teleporte_2_cantina.gd" id="13_o54dy"]
+[ext_resource type="Script" uid="uid://dkg5drsnuhcfm" path="res://Cenas/teleporte_1_volta_cantina.gd" id="14_5osct"]
+[ext_resource type="Script" uid="uid://bj6fp34uu63xi" path="res://Cenas/teleporte_3_ida_cantina.gd" id="16_s0cfr"]
+[ext_resource type="Script" uid="uid://b73rm7fgv0kvb" path="res://Cenas/teleporte_3_volta_cantina.gd" id="16_x5iko"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r1pbo"]
 size = Vector2(94.25, 62.5)
@@ -75,7 +80,7 @@ size = Vector2(26, 30)
 size = Vector2(72, 33)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tsitm"]
-size = Vector2(56, 13)
+size = Vector2(56, 21.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_11j8r"]
 size = Vector2(70.5, 40.75)
@@ -101,6 +106,12 @@ size = Vector2(103.5, 18)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_a2h3u"]
 size = Vector2(156, 61)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fcnqv"]
+size = Vector2(20, 183.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7numd"]
+size = Vector2(20, 118)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yuyqp"]
 size = Vector2(17.5, 16)
 
@@ -120,7 +131,7 @@ size = Vector2(19.5, 136)
 size = Vector2(37, 162)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d0u6y"]
-size = Vector2(44, 94.5)
+size = Vector2(12, 94.5)
 
 [node name="Fase3_Cantina" type="Node2D" unique_id=1347015118]
 script = ExtResource("1_p80tr")
@@ -234,7 +245,7 @@ shape = SubResource("RectangleShape2D_bmgmx")
 debug_color = Color(0, 0, 0.8028186, 0.41960785)
 
 [node name="CollisionShape2D21" type="CollisionShape2D" parent="StaticBody2D" unique_id=172547588]
-position = Vector2(860, 482.5)
+position = Vector2(858, 484.75)
 shape = SubResource("RectangleShape2D_tsitm")
 debug_color = Color(0, 0, 0.8028186, 0.41960785)
 
@@ -277,6 +288,16 @@ debug_color = Color(0, 0, 0.8028186, 0.41960785)
 position = Vector2(795, 596.5)
 shape = SubResource("RectangleShape2D_a2h3u")
 debug_color = Color(0, 0, 0.8028186, 0.41960785)
+
+[node name="CollisionShape2D30" type="CollisionShape2D" parent="StaticBody2D" unique_id=1316637092]
+position = Vector2(-12, 89.75)
+shape = SubResource("RectangleShape2D_fcnqv")
+debug_color = Color(0, 0, 0.827451, 0.41960785)
+
+[node name="CollisionShape2D31" type="CollisionShape2D" parent="StaticBody2D" unique_id=1866394134]
+position = Vector2(1164, 563)
+shape = SubResource("RectangleShape2D_7numd")
+debug_color = Color(0, 0, 0.52156866, 0.41960785)
 
 [node name="Menino" parent="." unique_id=1491382596 instance=ExtResource("2_6tc0b")]
 position = Vector2(1, 104)
@@ -423,33 +444,38 @@ autostart = true
 [node name="HUD" parent="." unique_id=556092161 instance=ExtResource("12_o65gn")]
 
 [node name="Teleporte1_ida_Cantina" type="Area2D" parent="." unique_id=887338337]
+script = ExtResource("13_aff3x")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Teleporte1_ida_Cantina" unique_id=821676068]
 position = Vector2(1177, 225.5)
 shape = SubResource("RectangleShape2D_g4v7s")
 
 [node name="Teleporte1_volta_Cantina" type="Area2D" parent="." unique_id=2021060061]
+script = ExtResource("14_5osct")
 
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="Teleporte1_volta_Cantina" unique_id=1470827873]
 position = Vector2(1169.75, 75.75)
 shape = SubResource("RectangleShape2D_3gngh")
 
-[node name="Area2D3" type="Area2D" parent="." unique_id=1484430014]
+[node name="Teleporte_2" type="Area2D" parent="." unique_id=1484430014]
+script = ExtResource("13_o54dy")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D3" unique_id=804958960]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Teleporte_2" unique_id=804958960]
 position = Vector2(-13.25, 317)
 shape = SubResource("RectangleShape2D_yf5fn")
 
-[node name="Area2D2" type="Area2D" parent="." unique_id=219019491]
+[node name="Teleporte_3_ida_cantina" type="Area2D" parent="." unique_id=219019491]
+script = ExtResource("16_s0cfr")
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="Area2D2" unique_id=223710407]
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Teleporte_3_ida_cantina" unique_id=223710407]
 position = Vector2(1173, 388)
 shape = SubResource("RectangleShape2D_57qmd")
 
-[node name="Area2D4" type="Area2D" parent="." unique_id=43335710]
+[node name="Teleporte_3_volta_cantina" type="Area2D" parent="." unique_id=43335710]
+script = ExtResource("16_x5iko")
 
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="Area2D4" unique_id=1634322362]
-position = Vector2(-24, 498.25)
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Teleporte_3_volta_cantina" unique_id=1634322362]
+position = Vector2(-8, 498.25)
 shape = SubResource("RectangleShape2D_d0u6y")
 
 [node name="Dialogo" parent="." unique_id=1775294399 instance=ExtResource("13_6na1w")]
