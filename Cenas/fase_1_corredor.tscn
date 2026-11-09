@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://bhtor5k1cjwnh" path="res://Cenas/menina.tscn" id="2_fe5rr"]
 [ext_resource type="PackedScene" uid="uid://1iotk2isge33" path="res://Cenas/menino.tscn" id="3_7ia1q"]
 [ext_resource type="Script" uid="uid://buw4j0qkrtbe" path="res://Cenas/porta.gd" id="4_fe5rr"]
-[ext_resource type="PackedScene" path="res://Cenas/dialogo.tscn" id="5_7ia1q"]
+[ext_resource type="PackedScene" uid="uid://dmkv7ja6xecik" path="res://Cenas/dialogo.tscn" id="5_7ia1q"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_r1pbo"]
 
@@ -19,12 +19,9 @@ size = Vector2(67, 88)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=213396848]
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=1032073410]
-position = Vector2(578, 330)
-
 [node name="SchoolHallway" type="Sprite2D" parent="." unique_id=1374503250]
-position = Vector2(1279, 360)
-scale = Vector2(1.1749539, 1)
+position = Vector2(1333.4999, 360)
+scale = Vector2(1.2251381, 1)
 texture = ExtResource("1_wwelv")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1007533231]
@@ -43,12 +40,18 @@ position = Vector2(87, 482)
 [node name="Menino" parent="." unique_id=1491382596 instance=ExtResource("3_7ia1q")]
 position = Vector2(201, 485)
 
+[node name="Camera2D" type="Camera2D" parent="Menino" unique_id=1625864344]
+limit_left = 1
+limit_top = -10000002
+limit_right = 2500
+limit_bottom = 700
+
 [node name="Porta" type="Area2D" parent="." unique_id=762873540]
-position = Vector2(1914, 540)
+position = Vector2(2621, 554)
 script = ExtResource("4_fe5rr")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Porta" unique_id=2140903600]
-position = Vector2(0, 1)
+position = Vector2(2, 0)
 shape = SubResource("RectangleShape2D_i3cru")
 
 [node name="Dialogo" parent="." unique_id=1022184095 instance=ExtResource("5_7ia1q")]

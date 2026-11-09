@@ -336,6 +336,14 @@ scale = Vector2(0.5, 0.5)
 position = Vector2(55, 98)
 scale = Vector2(0.5, 0.5)
 
+[node name="Camera2D" type="Camera2D" parent="Menino" unique_id=1358581707]
+position = Vector2(-110, -196)
+scale = Vector2(2, 2)
+limit_left = 2
+limit_top = 0
+limit_right = 1588
+limit_bottom = 640
+
 [node name="NPC1" parent="." unique_id=1210055303 instance=ExtResource("9_7bhjq")]
 position = Vector2(246.00002, 122)
 scale = Vector2(1.5, 1.5)
