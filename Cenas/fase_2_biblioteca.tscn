@@ -14,13 +14,13 @@
 [ext_resource type="PackedScene" uid="uid://dmkv7ja6xecik" path="res://Cenas/dialogo.tscn" id="12_j21mv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r1pbo"]
-size = Vector2(281.5, 19)
+size = Vector2(281.5, 15.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dvu1o"]
-size = Vector2(221, 20.75)
+size = Vector2(221, 17.375)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i3cru"]
-size = Vector2(288, 14.75)
+size = Vector2(288, 12)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k7ecr"]
 size = Vector2(136.25, 16)
@@ -29,7 +29,7 @@ size = Vector2(136.25, 16)
 size = Vector2(91, 40.25)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p3mgv"]
-size = Vector2(344, 52.5)
+size = Vector2(344, 49)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h52w5"]
 size = Vector2(252, 13)
@@ -105,17 +105,17 @@ metadata/_edit_lock_ = true
 [node name="ChaoFisico" type="StaticBody2D" parent="." unique_id=151290810]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ChaoFisico" unique_id=58984273]
-position = Vector2(141.25, 166)
+position = Vector2(141, 176.75)
 shape = SubResource("RectangleShape2D_r1pbo")
 debug_color = Color(0, 0, 1, 0.41960785)
 
 [node name="CollisionShape2D6" type="CollisionShape2D" parent="ChaoFisico" unique_id=592765447]
-position = Vector2(399, 177)
+position = Vector2(398, 179.6875)
 shape = SubResource("RectangleShape2D_dvu1o")
 debug_color = Color(0, 0, 1, 0.41960785)
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="ChaoFisico" unique_id=2041115597]
-position = Vector2(146, 328.625)
+position = Vector2(146, 330)
 shape = SubResource("RectangleShape2D_i3cru")
 debug_color = Color(0, 0, 1, 0.41960785)
 
@@ -130,7 +130,7 @@ shape = SubResource("RectangleShape2D_4svuj")
 debug_color = Color(0, 0, 1, 0.41960785)
 
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="ChaoFisico" unique_id=228939253]
-position = Vector2(984, 193.75)
+position = Vector2(984, 195.5)
 shape = SubResource("RectangleShape2D_p3mgv")
 debug_color = Color(0, 0, 1, 0.41960785)
 
@@ -222,11 +222,11 @@ shape = SubResource("RectangleShape2D_d0u6y")
 debug_color = Color(0, 0, 1, 0.41960785)
 
 [node name="Menina" parent="." unique_id=543179222 instance=ExtResource("2_aw4sv")]
-position = Vector2(6, 85)
+position = Vector2(8, 96)
 scale = Vector2(0.5, 0.5)
 
 [node name="Menino" parent="." unique_id=1491382596 instance=ExtResource("3_msy6y")]
-position = Vector2(118, 90)
+position = Vector2(57, 100)
 scale = Vector2(0.5, 0.5)
 
 [node name="Livro" type="Area2D" parent="." unique_id=1843824109]
@@ -333,7 +333,7 @@ position = Vector2(1091, 317)
 shape = SubResource("CircleShape2D_r1pbo")
 
 [node name="NPC2" parent="." unique_id=771855245 instance=ExtResource("7_dhuqm")]
-position = Vector2(253, 107)
+position = Vector2(250, 121)
 scale = Vector2(0.8, 0.8)
 
 [node name="Timer" type="Timer" parent="." unique_id=890555651]

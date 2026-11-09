@@ -304,7 +304,7 @@ position = Vector2(1, 104)
 scale = Vector2(0.5, 0.5)
 
 [node name="Menina" parent="." unique_id=543179222 instance=ExtResource("3_eshng")]
-position = Vector2(41, 97)
+position = Vector2(35, 103)
 scale = Vector2(0.5, 0.5)
 
 [node name="Panqueca" type="Area2D" parent="." unique_id=471013319]
