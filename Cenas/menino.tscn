@@ -5,9 +5,9 @@
 [ext_resource type="Texture2D" uid="uid://doxj8t5tuy8bu" path="res://Assets/Personagens principais/Personagens principais/Jogador1/Movimento/Pulo/Jogador1 - pulo (2).png" id="2_a1noe"]
 [ext_resource type="Texture2D" uid="uid://b8qcch4css857" path="res://Assets/Personagens principais/Personagens principais/Jogador1/Movimento/Pulo/Jogador1 - pulo (3).png" id="3_cdivb"]
 [ext_resource type="Texture2D" uid="uid://vaggbcke8n2" path="res://Assets/Personagens principais/Personagens principais/Jogador1/Movimento/Pulo/Jogador1 - pulo (4).png" id="4_0jlfv"]
-[ext_resource type="Texture2D" uid="uid://c8x8ymn4kh152" path="res://Assets/Personagens principais/Personagens principais/Jogador1/Movimento/Direita/00_Jogador1Direita.png" id="5_pjuno"]
-[ext_resource type="Texture2D" uid="uid://diyc5jivk27kd" path="res://Assets/Personagens principais/Personagens principais/Jogador1/Movimento/Direita/01_Jogador1Direita.png" id="6_6uxm2"]
-[ext_resource type="Texture2D" uid="uid://k4awo1ahp67c" path="res://Assets/Personagens principais/Personagens principais/Jogador1/Movimento/Direita/02_Jogador1Direita.png" id="7_08bfo"]
+[ext_resource type="Texture2D" uid="uid://b8eqod5k8qjti" path="res://Assets/Personagens principais/Personagens principais/Jogador1/Movimento/Ajuste-walk/00_Jogador1Direita_padronizado.png" id="6_a1noe"]
+[ext_resource type="Texture2D" uid="uid://b000v0vggfx85" path="res://Assets/Personagens principais/Personagens principais/Jogador1/Movimento/Ajuste-walk/01_Jogador1Direita_padronizado.png" id="7_cdivb"]
+[ext_resource type="Texture2D" uid="uid://c384i0b25ggud" path="res://Assets/Personagens principais/Personagens principais/Jogador1/Movimento/Ajuste-walk/02_Jogador1Direita_padronizado.png" id="8_0jlfv"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_r1pbo"]
 animations = [{
@@ -38,13 +38,13 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("5_pjuno")
+"texture": ExtResource("6_a1noe")
 }, {
 "duration": 1.0,
-"texture": ExtResource("6_6uxm2")
+"texture": ExtResource("7_cdivb")
 }, {
 "duration": 1.0,
-"texture": ExtResource("7_08bfo")
+"texture": ExtResource("8_0jlfv")
 }],
 "loop": 1,
 "name": &"walk",
@@ -61,8 +61,8 @@ script = ExtResource("1_a1noe")
 position = Vector2(52.249992, 53.750004)
 scale = Vector2(0.6505016, 0.6404683)
 sprite_frames = SubResource("SpriteFrames_r1pbo")
-animation = &"jump"
-frame_progress = 0.8893743
+animation = &"walk"
+frame_progress = 0.27534238
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1653288900]
 position = Vector2(52, 79.25)

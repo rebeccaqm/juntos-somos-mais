@@ -15,7 +15,7 @@
 [ext_resource type="Script" uid="uid://deyxdxusg54yy" path="res://Cenas/teleporte1_volta_Patio.gd" id="13_qrhl2"]
 [ext_resource type="Script" uid="uid://c7apc4aptulto" path="res://Cenas/teleporte_2_ida_Patio.gd" id="14_ekh6q"]
 [ext_resource type="Script" uid="uid://c4vldk63jmapf" path="res://Cenas/teleporte_2_volta_Patio.gd" id="15_iecl1"]
-[ext_resource type="PackedScene" path="res://Cenas/dialogo.tscn" id="16_rkg74"]
+[ext_resource type="PackedScene" uid="uid://dmkv7ja6xecik" path="res://Cenas/dialogo.tscn" id="16_rkg74"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r1pbo"]
 size = Vector2(458.6875, 17.25)
@@ -108,7 +108,6 @@ script = ExtResource("1_otujp")
 position = Vector2(795, 326)
 scale = Vector2(0.9925, 0.8075)
 texture = ExtResource("1_iaxvs")
-metadata/_edit_lock_ = true
 
 [node name="ChaoFisico" type="StaticBody2D" parent="." unique_id=1147289762]
 

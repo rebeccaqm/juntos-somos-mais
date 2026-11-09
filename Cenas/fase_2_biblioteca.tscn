@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://bpp3ghsb6uc6h"]
 
-[ext_resource type="Texture2D" uid="uid://fu4rs6i0x5qg" path="res://Assets/Background & Coletáveis/Background & Coletáveis/biblioteca.jpeg" id="1_di0g1"]
 [ext_resource type="Script" uid="uid://dnlrjsbdqkd6h" path="res://Cenas/fase_2_biblioteca.gd" id="1_hg3ge"]
 [ext_resource type="PackedScene" uid="uid://bhtor5k1cjwnh" path="res://Cenas/menina.tscn" id="2_aw4sv"]
+[ext_resource type="Texture2D" uid="uid://cmkon0s71r0px" path="res://Assets/Background & Coletáveis/Background & Coletáveis/Biblioteca escolar pixelada renovada (1).png" id="2_j21mv"]
 [ext_resource type="PackedScene" uid="uid://1iotk2isge33" path="res://Cenas/menino.tscn" id="3_msy6y"]
 [ext_resource type="Script" uid="uid://7b34s281v445" path="res://Cenas/livro.gd" id="4_l4kyg"]
 [ext_resource type="Texture2D" uid="uid://bd4dv6lp3ll8m" path="res://Assets/Lixo, Livro e Comida/livros1-remove.png" id="4_msy6y"]
@@ -11,7 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://i7vgiqh3ngpu" path="res://Cenas/hud.tscn" id="9_wvyxx"]
 [ext_resource type="Script" uid="uid://tjjn4fwmil4y" path="res://Cenas/teleporte_1_ida_biblio.gd" id="10_gou4p"]
 [ext_resource type="Script" uid="uid://c84pg6c1cddbl" path="res://Cenas/teleporte_1_volta_biblio.gd" id="11_ddbe2"]
-[ext_resource type="PackedScene" path="res://Cenas/dialogo.tscn" id="12_j21mv"]
+[ext_resource type="PackedScene" uid="uid://dmkv7ja6xecik" path="res://Cenas/dialogo.tscn" id="12_j21mv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r1pbo"]
 size = Vector2(281.5, 19)
@@ -26,19 +26,16 @@ size = Vector2(288, 14.75)
 size = Vector2(136.25, 16)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4svuj"]
-size = Vector2(91, 12.5)
+size = Vector2(91, 40.25)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p3mgv"]
-size = Vector2(160, 17)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_cqlss"]
-size = Vector2(188.5, 12.5)
+size = Vector2(344, 52.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h52w5"]
 size = Vector2(252, 13)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6bkmy"]
-size = Vector2(76, 13)
+size = Vector2(58, 13)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vc52p"]
 size = Vector2(102, 22.25)
@@ -52,14 +49,11 @@ size = Vector2(424, 12.5)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_388x1"]
 size = Vector2(117, 19)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_x2qsg"]
-size = Vector2(131.75, 11.5)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_un0v8"]
 size = Vector2(304.5, 9.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7d8dq"]
-size = Vector2(73, 12)
+size = Vector2(73, 40)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qamte"]
 size = Vector2(21, 16)
@@ -69,9 +63,6 @@ size = Vector2(19.25, 11.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2g5bt"]
 size = Vector2(22.125, 14.5)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_gudib"]
-size = Vector2(32.25, 13.75)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bmgmx"]
 size = Vector2(24.5, 12)
@@ -106,9 +97,9 @@ size = Vector2(9, 150)
 script = ExtResource("1_hg3ge")
 
 [node name="Biblioteca" type="Sprite2D" parent="." unique_id=1435655179]
-position = Vector2(578.5, 324.99997)
-scale = Vector2(0.7206251, 0.8125)
-texture = ExtResource("1_di0g1")
+position = Vector2(579.50006, 323.50003)
+scale = Vector2(0.64994365, 0.72942513)
+texture = ExtResource("2_j21mv")
 metadata/_edit_lock_ = true
 
 [node name="ChaoFisico" type="StaticBody2D" parent="." unique_id=151290810]
@@ -119,7 +110,7 @@ shape = SubResource("RectangleShape2D_r1pbo")
 debug_color = Color(0, 0, 1, 0.41960785)
 
 [node name="CollisionShape2D6" type="CollisionShape2D" parent="ChaoFisico" unique_id=592765447]
-position = Vector2(396.5, 184.625)
+position = Vector2(399, 177)
 shape = SubResource("RectangleShape2D_dvu1o")
 debug_color = Color(0, 0, 1, 0.41960785)
 
@@ -134,18 +125,13 @@ shape = SubResource("RectangleShape2D_k7ecr")
 debug_color = Color(0, 0, 1, 0.41960785)
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="ChaoFisico" unique_id=1849413829]
-position = Vector2(764.5, 187)
+position = Vector2(764.5, 200.875)
 shape = SubResource("RectangleShape2D_4svuj")
 debug_color = Color(0, 0, 1, 0.41960785)
 
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="ChaoFisico" unique_id=228939253]
-position = Vector2(890, 169)
+position = Vector2(984, 193.75)
 shape = SubResource("RectangleShape2D_p3mgv")
-debug_color = Color(0, 0, 1, 0.41960785)
-
-[node name="CollisionShape2D7" type="CollisionShape2D" parent="ChaoFisico" unique_id=1718991706]
-position = Vector2(1059.75, 187)
-shape = SubResource("RectangleShape2D_cqlss")
 debug_color = Color(0, 0, 1, 0.41960785)
 
 [node name="CollisionShape2D8" type="CollisionShape2D" parent="ChaoFisico" unique_id=740975140]
@@ -154,7 +140,7 @@ shape = SubResource("RectangleShape2D_h52w5")
 debug_color = Color(0, 0, 1, 0.41960785)
 
 [node name="CollisionShape2D9" type="CollisionShape2D" parent="ChaoFisico" unique_id=1508447064]
-position = Vector2(802, 368.5)
+position = Vector2(824, 370)
 shape = SubResource("RectangleShape2D_6bkmy")
 debug_color = Color(0, 0, 1, 0.41960785)
 
@@ -164,12 +150,12 @@ shape = SubResource("RectangleShape2D_vc52p")
 debug_color = Color(0, 0, 1, 0.41960785)
 
 [node name="CollisionShape2D11" type="CollisionShape2D" parent="ChaoFisico" unique_id=761378497]
-position = Vector2(208.5, 599.5)
+position = Vector2(211, 589)
 shape = SubResource("RectangleShape2D_81h3g")
 debug_color = Color(0, 0, 1, 0.41960785)
 
 [node name="CollisionShape2D12" type="CollisionShape2D" parent="ChaoFisico" unique_id=292736224]
-position = Vector2(637, 596.75)
+position = Vector2(638, 589)
 shape = SubResource("RectangleShape2D_wnddu")
 debug_color = Color(0, 0, 1, 0.41960785)
 
@@ -178,18 +164,13 @@ position = Vector2(367.5, 580.5)
 shape = SubResource("RectangleShape2D_388x1")
 debug_color = Color(0, 0, 1, 0.41960785)
 
-[node name="CollisionShape2D14" type="CollisionShape2D" parent="ChaoFisico" unique_id=1365156548]
-position = Vector2(623.125, 516.25)
-shape = SubResource("RectangleShape2D_x2qsg")
-debug_color = Color(0, 0, 1, 0.41960785)
-
 [node name="CollisionShape2D15" type="CollisionShape2D" parent="ChaoFisico" unique_id=659156344]
 position = Vector2(999.75, 583.25)
 shape = SubResource("RectangleShape2D_un0v8")
 debug_color = Color(0, 0, 1, 0.41960785)
 
 [node name="CollisionShape2D16" type="CollisionShape2D" parent="ChaoFisico" unique_id=532103840]
-position = Vector2(748.5, 536)
+position = Vector2(753, 568)
 shape = SubResource("RectangleShape2D_7d8dq")
 debug_color = Color(0, 0, 1, 0.41960785)
 
@@ -208,23 +189,18 @@ position = Vector2(314, 357)
 shape = SubResource("RectangleShape2D_2g5bt")
 debug_color = Color(0, 0, 1, 0.41960785)
 
-[node name="CollisionShape2D20" type="CollisionShape2D" parent="ChaoFisico" unique_id=1869647025]
-position = Vector2(316.875, 364.125)
-shape = SubResource("RectangleShape2D_gudib")
-debug_color = Color(0, 0, 1, 0.41960785)
-
 [node name="CollisionShape2D21" type="CollisionShape2D" parent="ChaoFisico" unique_id=1725552918]
-position = Vector2(330, 371)
+position = Vector2(328, 370)
 shape = SubResource("RectangleShape2D_bmgmx")
 debug_color = Color(0, 0, 1, 0.41960785)
 
 [node name="CollisionShape2D22" type="CollisionShape2D" parent="ChaoFisico" unique_id=999253911]
-position = Vector2(337.8125, 378.5625)
+position = Vector2(335, 379)
 shape = SubResource("RectangleShape2D_tsitm")
 debug_color = Color(0, 0, 1, 0.41960785)
 
 [node name="CollisionShape2D23" type="CollisionShape2D" parent="ChaoFisico" unique_id=954130154]
-position = Vector2(869.0266, 449.58054)
+position = Vector2(875, 458.00003)
 rotation = -0.7853982
 scale = Vector2(0.9999999, 0.9999999)
 shape = SubResource("RectangleShape2D_11j8r")
