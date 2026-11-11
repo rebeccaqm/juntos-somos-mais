@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://dksc20k74jurk"]
+
+[ext_resource type="Script" uid="uid://bi1ofldkonf7p" path="res://Cenas/gerenciador_audio.gd" id="1_3oq53"]
+
+[node name="GerenciadorAudio" type="Node" unique_id=1483393336]
+process_mode = 3
+script = ExtResource("1_3oq53")
+
+[node name="MusicaFundo" type="AudioStreamPlayer" parent="." unique_id=405206977]
+
+[node name="SomClique" type="AudioStreamPlayer" parent="." unique_id=2042847792]
