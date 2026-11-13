@@ -14,7 +14,7 @@ normal = Vector2(1, 0)
 distance = -1.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i3cru"]
-size = Vector2(67, 88)
+size = Vector2(67, 253)
 
 [node name="Fase1_Corredor" type="Node2D" unique_id=1484202973]
 script = ExtResource("1_ppjju")
@@ -43,9 +43,9 @@ position = Vector2(87, 482)
 position = Vector2(201, 485)
 
 [node name="Camera2D" type="Camera2D" parent="Menino" unique_id=1625864344]
-limit_left = 1
+limit_left = 2
 limit_top = -10000002
-limit_right = 2500
+limit_right = 2501
 limit_bottom = 700
 
 [node name="Porta" type="Area2D" parent="." unique_id=762873540]
@@ -53,7 +53,7 @@ position = Vector2(2621, 554)
 script = ExtResource("4_fe5rr")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Porta" unique_id=2140903600]
-position = Vector2(2, 0)
+position = Vector2(-94, -34)
 shape = SubResource("RectangleShape2D_i3cru")
 
 [node name="Dialogo" parent="." unique_id=1022184095 instance=ExtResource("5_7ia1q")]

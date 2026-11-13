@@ -28,9 +28,9 @@ const CENAS_COM_CAIXA_NO_TOPO := ["fase_1_corredor", "sala_boss"]
 # Qual conversa abre cada cena (pelo nome do arquivo da cena)
 const CONVERSA_POR_CENA := {
 	"fase_1_corredor": "corredor_inicio",
-	"fase_1_patio": "patio_inicio",
-	"fase_2_biblioteca": "biblioteca_inicio",
-	"fase_3_cantina": "cantina_inicio",
+	"fase_2_patio": "patio_inicio",
+	"fase_3_biblioteca": "biblioteca_inicio",
+	"fase_4_cantina": "cantina_inicio",
 	"sala_boss": "boss_inicio",
 }
 

@@ -19,4 +19,4 @@ func _on_body_exited(body: Node2D) -> void:
 func _verificar_troca() -> void:
 	if jogadores_dentro.size() < jogadores_necessarios:
 		return
-	get_tree().call_deferred("change_scene_to_file","res://Cenas/fase_1_patio.tscn")
+	get_tree().call_deferred("change_scene_to_file","res://Cenas/fase_2_patio.tscn")

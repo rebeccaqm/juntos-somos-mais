@@ -1,17 +1,18 @@
 [gd_scene format=3 uid="uid://bpp3ghsb6uc6h"]
 
-[ext_resource type="Script" uid="uid://dnlrjsbdqkd6h" path="res://Cenas/fase_2_biblioteca.gd" id="1_hg3ge"]
-[ext_resource type="PackedScene" uid="uid://bhtor5k1cjwnh" path="res://Cenas/menina.tscn" id="2_aw4sv"]
-[ext_resource type="Texture2D" uid="uid://cmkon0s71r0px" path="res://Assets/Background & Coletáveis/Background & Coletáveis/Biblioteca escolar pixelada renovada (1).png" id="2_j21mv"]
-[ext_resource type="PackedScene" uid="uid://1iotk2isge33" path="res://Cenas/menino.tscn" id="3_msy6y"]
-[ext_resource type="Script" uid="uid://7b34s281v445" path="res://Cenas/livro.gd" id="4_l4kyg"]
-[ext_resource type="Texture2D" uid="uid://bd4dv6lp3ll8m" path="res://Assets/Lixo, Livro e Comida/livros1-remove.png" id="4_msy6y"]
-[ext_resource type="Script" uid="uid://d0lnrxgtac4g0" path="res://Cenas/porta_2.gd" id="6_p5tpj"]
-[ext_resource type="PackedScene" uid="uid://dcwpo5ulkhj1j" path="res://Cenas/npc_2.tscn" id="7_dhuqm"]
-[ext_resource type="PackedScene" uid="uid://i7vgiqh3ngpu" path="res://Cenas/hud.tscn" id="9_wvyxx"]
-[ext_resource type="Script" uid="uid://tjjn4fwmil4y" path="res://Cenas/teleporte_1_ida_biblio.gd" id="10_gou4p"]
-[ext_resource type="Script" uid="uid://c84pg6c1cddbl" path="res://Cenas/teleporte_1_volta_biblio.gd" id="11_ddbe2"]
-[ext_resource type="PackedScene" uid="uid://dmkv7ja6xecik" path="res://Cenas/dialogo.tscn" id="12_j21mv"]
+[ext_resource type="Script" uid="uid://dnlrjsbdqkd6h" path="res://Cenas/fase_3_biblioteca.gd" id="1_7avw5"]
+[ext_resource type="Texture2D" uid="uid://cmkon0s71r0px" path="res://Assets/Background & Coletáveis/Background & Coletáveis/Biblioteca escolar pixelada renovada (1).png" id="2_7otlq"]
+[ext_resource type="PackedScene" uid="uid://bhtor5k1cjwnh" path="res://Cenas/menina.tscn" id="3_0j25j"]
+[ext_resource type="PackedScene" uid="uid://1iotk2isge33" path="res://Cenas/menino.tscn" id="4_arxdp"]
+[ext_resource type="Script" uid="uid://7b34s281v445" path="res://Cenas/livro.gd" id="5_ie0b1"]
+[ext_resource type="Texture2D" uid="uid://bd4dv6lp3ll8m" path="res://Assets/Lixo, Livro e Comida/livros1-remove.png" id="6_t3mma"]
+[ext_resource type="Script" uid="uid://d0lnrxgtac4g0" path="res://Cenas/porta_2.gd" id="7_6vhhc"]
+[ext_resource type="Texture2D" uid="uid://bl4fd2n5wayqu" path="res://Assets/PortalFAse/Portal-Spinning.png" id="8_oqfoi"]
+[ext_resource type="PackedScene" uid="uid://dcwpo5ulkhj1j" path="res://Cenas/npc_2.tscn" id="9_7v5mo"]
+[ext_resource type="PackedScene" uid="uid://i7vgiqh3ngpu" path="res://Cenas/hud.tscn" id="10_u1uff"]
+[ext_resource type="Script" uid="uid://tjjn4fwmil4y" path="res://Cenas/teleporte_1_ida_biblio.gd" id="11_kj7f3"]
+[ext_resource type="Script" uid="uid://c84pg6c1cddbl" path="res://Cenas/teleporte_1_volta_biblio.gd" id="12_ihfx4"]
+[ext_resource type="PackedScene" uid="uid://dmkv7ja6xecik" path="res://Cenas/dialogo.tscn" id="13_5gu1n"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r1pbo"]
 size = Vector2(281.5, 15.5)
@@ -87,6 +88,70 @@ size = Vector2(20, 202.5)
 [sub_resource type="CircleShape2D" id="CircleShape2D_r1pbo"]
 radius = 41.04875
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_7drar"]
+atlas = ExtResource("8_oqfoi")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k2gpr"]
+atlas = ExtResource("8_oqfoi")
+region = Rect2(0, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fwmfi"]
+atlas = ExtResource("8_oqfoi")
+region = Rect2(0, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d3r7e"]
+atlas = ExtResource("8_oqfoi")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ofi0v"]
+atlas = ExtResource("8_oqfoi")
+region = Rect2(64, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qsyjo"]
+atlas = ExtResource("8_oqfoi")
+region = Rect2(64, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tlm10"]
+atlas = ExtResource("8_oqfoi")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_udrlp"]
+atlas = ExtResource("8_oqfoi")
+region = Rect2(128, 64, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_g4v7s"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7drar")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k2gpr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fwmfi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d3r7e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ofi0v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qsyjo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tlm10")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_udrlp")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 6.0
+}]
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
 size = Vector2(20, 144)
 
@@ -94,12 +159,12 @@ size = Vector2(20, 144)
 size = Vector2(9, 150)
 
 [node name="Fase2_Biblioteca" type="Node2D" unique_id=2033929671]
-script = ExtResource("1_hg3ge")
+script = ExtResource("1_7avw5")
 
 [node name="Biblioteca" type="Sprite2D" parent="." unique_id=1435655179]
 position = Vector2(579.50006, 323.50003)
 scale = Vector2(0.64994365, 0.72942513)
-texture = ExtResource("2_j21mv")
+texture = ExtResource("2_7otlq")
 metadata/_edit_lock_ = true
 
 [node name="ChaoFisico" type="StaticBody2D" parent="." unique_id=151290810]
@@ -221,140 +286,145 @@ position = Vector2(-12, 488.75)
 shape = SubResource("RectangleShape2D_d0u6y")
 debug_color = Color(0, 0, 1, 0.41960785)
 
-[node name="Menina" parent="." unique_id=543179222 instance=ExtResource("2_aw4sv")]
+[node name="Menina" parent="." unique_id=543179222 instance=ExtResource("3_0j25j")]
 position = Vector2(8, 96)
 scale = Vector2(0.5, 0.5)
 
-[node name="Menino" parent="." unique_id=1491382596 instance=ExtResource("3_msy6y")]
+[node name="Menino" parent="." unique_id=1491382596 instance=ExtResource("4_arxdp")]
 position = Vector2(57, 100)
 scale = Vector2(0.5, 0.5)
 
 [node name="Livro" type="Area2D" parent="." unique_id=1843824109]
-script = ExtResource("4_l4kyg")
+script = ExtResource("5_ie0b1")
 
 [node name="Sprite2D" type="Sprite2D" parent="Livro" unique_id=1528227160]
 position = Vector2(639, 124)
 scale = Vector2(0.091650344, 0.08836207)
-texture = ExtResource("4_msy6y")
+texture = ExtResource("6_t3mma")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Livro" unique_id=476585487]
 position = Vector2(637, 127)
 shape = SubResource("RectangleShape2D_msy6y")
 
 [node name="Livro2" type="Area2D" parent="." unique_id=1428068926]
-script = ExtResource("4_l4kyg")
+script = ExtResource("5_ie0b1")
 
 [node name="Sprite2D" type="Sprite2D" parent="Livro2" unique_id=898406467]
 position = Vector2(863.1875, 142.78125)
 scale = Vector2(0.091650344, 0.08836207)
-texture = ExtResource("4_msy6y")
+texture = ExtResource("6_t3mma")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Livro2" unique_id=1273528764]
 position = Vector2(861.1875, 145.78125)
 shape = SubResource("RectangleShape2D_msy6y")
 
 [node name="Livro3" type="Area2D" parent="." unique_id=1653443720]
-script = ExtResource("4_l4kyg")
+script = ExtResource("5_ie0b1")
 
 [node name="Sprite2D" type="Sprite2D" parent="Livro3" unique_id=1169142714]
 position = Vector2(820.1875, 343.78125)
 scale = Vector2(0.091650344, 0.08836207)
-texture = ExtResource("4_msy6y")
+texture = ExtResource("6_t3mma")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Livro3" unique_id=524407591]
 position = Vector2(818.1875, 346.78125)
 shape = SubResource("RectangleShape2D_msy6y")
 
 [node name="Livro4" type="Area2D" parent="." unique_id=1650862277]
-script = ExtResource("4_l4kyg")
+script = ExtResource("5_ie0b1")
 
 [node name="Sprite2D" type="Sprite2D" parent="Livro4" unique_id=1547749515]
 position = Vector2(337.18756, 550.78125)
 scale = Vector2(0.091650344, 0.08836207)
-texture = ExtResource("4_msy6y")
+texture = ExtResource("6_t3mma")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Livro4" unique_id=2118720507]
 position = Vector2(335.18756, 553.78125)
 shape = SubResource("RectangleShape2D_msy6y")
 
 [node name="Livro5" type="Area2D" parent="." unique_id=584449063]
-script = ExtResource("4_l4kyg")
+script = ExtResource("5_ie0b1")
 
 [node name="Sprite2D" type="Sprite2D" parent="Livro5" unique_id=1623473032]
 position = Vector2(195.18753, 299.78125)
 scale = Vector2(0.091650344, 0.08836207)
-texture = ExtResource("4_msy6y")
+texture = ExtResource("6_t3mma")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Livro5" unique_id=1316422953]
 position = Vector2(193.18753, 302.78125)
 shape = SubResource("RectangleShape2D_msy6y")
 
 [node name="Livro6" type="Area2D" parent="." unique_id=2068033350]
-script = ExtResource("4_l4kyg")
+script = ExtResource("5_ie0b1")
 
 [node name="Sprite2D" type="Sprite2D" parent="Livro6" unique_id=994860632]
 position = Vector2(91.18753, 551.78125)
 scale = Vector2(0.091650344, 0.08836207)
-texture = ExtResource("4_msy6y")
+texture = ExtResource("6_t3mma")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Livro6" unique_id=616215684]
 position = Vector2(89.18753, 554.78125)
 shape = SubResource("RectangleShape2D_msy6y")
 
 [node name="Livro7" type="Area2D" parent="." unique_id=190708840]
-script = ExtResource("4_l4kyg")
+script = ExtResource("5_ie0b1")
 
 [node name="Sprite2D" type="Sprite2D" parent="Livro7" unique_id=454392259]
 position = Vector2(333.18756, 152.78128)
 scale = Vector2(0.091650344, 0.08836207)
-texture = ExtResource("4_msy6y")
+texture = ExtResource("6_t3mma")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Livro7" unique_id=1637850886]
 position = Vector2(331.18756, 155.78125)
 shape = SubResource("RectangleShape2D_msy6y")
 
 [node name="Livro8" type="Area2D" parent="." unique_id=1707738160]
-script = ExtResource("4_l4kyg")
+script = ExtResource("5_ie0b1")
 
 [node name="Sprite2D" type="Sprite2D" parent="Livro8" unique_id=185653881]
 position = Vector2(554.1875, 363.78125)
 scale = Vector2(0.091650344, 0.08836207)
-texture = ExtResource("4_msy6y")
+texture = ExtResource("6_t3mma")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Livro8" unique_id=69811246]
 position = Vector2(552.1875, 366.78125)
 shape = SubResource("RectangleShape2D_msy6y")
 
 [node name="Porta2" type="Area2D" parent="." unique_id=1614052676]
-script = ExtResource("6_p5tpj")
+script = ExtResource("7_6vhhc")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Porta2" unique_id=896261587]
 position = Vector2(1091, 317)
 shape = SubResource("CircleShape2D_r1pbo")
 
-[node name="NPC2" parent="." unique_id=771855245 instance=ExtResource("7_dhuqm")]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Porta2" unique_id=569223514]
+position = Vector2(1092, 317)
+scale = Vector2(1.7539065, 1.7812502)
+sprite_frames = SubResource("SpriteFrames_g4v7s")
+
+[node name="NPC2" parent="." unique_id=771855245 instance=ExtResource("9_7v5mo")]
 position = Vector2(250, 121)
 scale = Vector2(0.8, 0.8)
 
 [node name="Timer" type="Timer" parent="." unique_id=890555651]
 autostart = true
 
-[node name="HUD" parent="." unique_id=556092161 instance=ExtResource("9_wvyxx")]
+[node name="HUD" parent="." unique_id=556092161 instance=ExtResource("10_u1uff")]
 
 [node name="Teleporte1_ida_Biblio" type="Area2D" parent="." unique_id=1174008339]
-script = ExtResource("10_gou4p")
+script = ExtResource("11_kj7f3")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Teleporte1_ida_Biblio" unique_id=45107669]
 position = Vector2(1169, 104)
 shape = SubResource("RectangleShape2D_g4v7s")
 
 [node name="Teleporte1_volta_Biblio" type="Area2D" parent="." unique_id=1869129457]
-script = ExtResource("11_ddbe2")
+script = ExtResource("12_ihfx4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Teleporte1_volta_Biblio" unique_id=156892888]
 position = Vector2(-5.5, 255)
 shape = SubResource("RectangleShape2D_yf5fn")
 
-[node name="Dialogo" parent="." unique_id=1132045330 instance=ExtResource("12_j21mv")]
+[node name="Dialogo" parent="." unique_id=1132045330 instance=ExtResource("13_5gu1n")]
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

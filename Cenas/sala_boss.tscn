@@ -82,7 +82,9 @@ scale = Vector2(0.02, 0.02)
 [node name="Dialogo" parent="." unique_id=1396874187 instance=ExtResource("7_c12s2")]
 
 [node name="Menino" parent="." unique_id=1491382596 instance=ExtResource("6_c12s2")]
-position = Vector2(-20, 407)
+position = Vector2(-8.000001, 425)
+scale = Vector2(0.8, 0.8)
 
 [node name="Menina" parent="." unique_id=543179222 instance=ExtResource("7_jrdtt")]
-position = Vector2(10, 399)
+position = Vector2(27.999998, 422)
+scale = Vector2(0.8, 0.8)
