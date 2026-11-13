@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bm7x32kho6pid"]
 
 [ext_resource type="Texture2D" uid="uid://c8sivgbtc4rtr" path="res://Assets/Background & Coletáveis/Background & Coletáveis/cantina.jpeg" id="1_13g3t"]
-[ext_resource type="Script" uid="uid://dn0pailnpr263" path="res://Cenas/fase_3_cantina.gd" id="1_p80tr"]
+[ext_resource type="Script" uid="uid://dn0pailnpr263" path="res://Cenas/fase_4_cantina.gd" id="1_p80tr"]
 [ext_resource type="PackedScene" uid="uid://1iotk2isge33" path="res://Cenas/menino.tscn" id="2_6tc0b"]
 [ext_resource type="PackedScene" uid="uid://bhtor5k1cjwnh" path="res://Cenas/menina.tscn" id="3_eshng"]
 [ext_resource type="Script" uid="uid://2f705876pfg4" path="res://Cenas/comida.gd" id="4_14rh1"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://bmicvibxy5vg7" path="res://Assets/Lixo, Livro e Comida/pudim.png" id="8_p80tr"]
 [ext_resource type="PackedScene" uid="uid://chkpglrh0ftfx" path="res://Cenas/npc_3.tscn" id="9_bble0"]
 [ext_resource type="Script" uid="uid://bxlegvl8ub1wv" path="res://Cenas/porta_3.gd" id="10_0u7vh"]
+[ext_resource type="Texture2D" uid="uid://bl4fd2n5wayqu" path="res://Assets/PortalFAse/Portal-Spinning.png" id="11_48in1"]
 [ext_resource type="PackedScene" uid="uid://i7vgiqh3ngpu" path="res://Cenas/hud.tscn" id="12_o65gn"]
 [ext_resource type="PackedScene" uid="uid://dmkv7ja6xecik" path="res://Cenas/dialogo.tscn" id="13_6na1w"]
 [ext_resource type="Script" uid="uid://cbg4jf0weve8i" path="res://Cenas/teleporte_1_ida_cantina.gd" id="13_aff3x"]
@@ -116,7 +117,71 @@ size = Vector2(20, 118)
 size = Vector2(17.5, 16)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_r1pbo"]
-radius = 23.021729
+radius = 26.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i6k8u"]
+atlas = ExtResource("11_48in1")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qctf2"]
+atlas = ExtResource("11_48in1")
+region = Rect2(0, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m155y"]
+atlas = ExtResource("11_48in1")
+region = Rect2(0, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_viwqb"]
+atlas = ExtResource("11_48in1")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3iobr"]
+atlas = ExtResource("11_48in1")
+region = Rect2(64, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rneh2"]
+atlas = ExtResource("11_48in1")
+region = Rect2(64, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n1hly"]
+atlas = ExtResource("11_48in1")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5umu5"]
+atlas = ExtResource("11_48in1")
+region = Rect2(128, 64, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_g4v7s"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i6k8u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qctf2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m155y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_viwqb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3iobr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rneh2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n1hly")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5umu5")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 6.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
 size = Vector2(44, 83)
@@ -431,8 +496,13 @@ shape = SubResource("RectangleShape2D_yuyqp")
 script = ExtResource("10_0u7vh")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Porta3" unique_id=430861597]
-position = Vector2(1126, 582)
+position = Vector2(1105, 575)
 shape = SubResource("CircleShape2D_r1pbo")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Porta3" unique_id=1711129656]
+position = Vector2(1099, 574)
+scale = Vector2(1.375, 1.3281248)
+sprite_frames = SubResource("SpriteFrames_g4v7s")
 
 [node name="NPC3" parent="." unique_id=640200815 instance=ExtResource("9_bble0")]
 position = Vector2(421.99997, 141.99998)

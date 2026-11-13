@@ -12,6 +12,7 @@ func _ready() -> void:
 func ativar() -> void:
 	visible = true
 	set_deferred("monitoring", true)
+	$AnimatedSprite2D.play("default")
 
 func desativar() -> void:
 	visible = false
@@ -29,4 +30,4 @@ func _on_body_exited(body: Node2D) -> void:
 func _verificar_troca() -> void:
 	if jogadores_dentro.size() < jogadores_necessarios:
 		return
-	get_tree().call_deferred("change_scene_to_file","res://Cenas/fase_2_biblioteca.tscn")
+	get_tree().call_deferred("change_scene_to_file","res://Cenas/fase_3_biblioteca.tscn")
