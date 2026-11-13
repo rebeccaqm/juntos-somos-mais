@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 @export var SPEED: float = 200.0
-@export var JUMP_VELOCITY: float = -400.0
+@export var JUMP_VELOCITY: float = -500.0
 @export var STOMP_IMPULSE: float = -300.0 # Impulso 
 
 var gravity: float = ProjectSettings.get_setting("physics/2d/default_gravity")
@@ -45,14 +45,14 @@ func verificar_colisoes() -> void:
 
 		if collider and collider.has_method("die") and not collider.is_dead:
 			
-			# Pulo em cima
+			# Pulo por cima
 			if collision.get_normal().y < -0.5:
-				collider.die()                 # Slime morre
-				velocity.y = STOMP_IMPULSE     # Impulso
+				collider.die()                 
+				velocity.y = STOMP_IMPULSE     
 			else:
-				# Bateu de lado ou por baixo: o Player morre/paralisa
+				# De lado
 				get_parent().morrer_ou_tomar_dano_menino()
-
+				
 func update_animation(direction: float) -> void:
 	if is_dead:
 		return
