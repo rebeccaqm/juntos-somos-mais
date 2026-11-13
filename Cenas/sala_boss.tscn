@@ -7,9 +7,11 @@
 [ext_resource type="PackedScene" uid="uid://1iotk2isge33" path="res://Cenas/menino.tscn" id="6_c12s2"]
 [ext_resource type="PackedScene" uid="uid://dmkv7ja6xecik" path="res://Cenas/dialogo.tscn" id="7_c12s2"]
 [ext_resource type="PackedScene" uid="uid://bhtor5k1cjwnh" path="res://Cenas/menina.tscn" id="7_jrdtt"]
+[ext_resource type="Script" uid="uid://buatu882qlwve" path="res://Cenas/spawn_ghost.gd" id="8_3t4wc"]
+[ext_resource type="PackedScene" uid="uid://bvhqjownkj13g" path="res://Cenas/fantasma_1.tscn" id="8_a6duw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ajtct"]
-size = Vector2(9.239806, 127.98532)
+size = Vector2(6.1596794, 368.4712)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
 size = Vector2(964, 24)
@@ -40,12 +42,12 @@ texture = ExtResource("1_cersd")
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=707958563]
 
 [node name="Lateral" type="CollisionShape2D" parent="StaticBody2D" unique_id=1815986246]
-position = Vector2(2.999939, 495.75)
+position = Vector2(1.9999897, 449.3125)
 scale = Vector2(0.6493799, 0.7305525)
 shape = SubResource("RectangleShape2D_ajtct")
 
 [node name="Lateral2" type="CollisionShape2D" parent="StaticBody2D" unique_id=1928873518]
-position = Vector2(1148, 496)
+position = Vector2(1150, 454.59372)
 scale = Vector2(0.6493799, 0.7305525)
 shape = SubResource("RectangleShape2D_ajtct")
 
@@ -62,29 +64,50 @@ position = Vector2(1104.5, 561)
 shape = SubResource("RectangleShape2D_57qmd")
 
 [node name="Plataforma1" type="CollisionShape2D" parent="StaticBody2D" unique_id=536332015]
+visibility_layer = 6
 position = Vector2(333, 394)
 shape = SubResource("RectangleShape2D_d0u6y")
 
 [node name="Plataforma2" type="CollisionShape2D" parent="StaticBody2D" unique_id=697125393]
+visibility_layer = 6
 position = Vector2(573.5, 394.75)
 shape = SubResource("RectangleShape2D_3gngh")
 
 [node name="Plataforma3" type="CollisionShape2D" parent="StaticBody2D" unique_id=1557177085]
+visibility_layer = 6
 position = Vector2(821, 394)
 shape = SubResource("RectangleShape2D_fcnqv")
 
 [node name="Boss" parent="." unique_id=5264430 instance=ExtResource("2_7ael8")]
-position = Vector2(573, 379)
-scale = Vector2(0.02, 0.02)
+position = Vector2(577, 376)
+scale = Vector2(0.04, 0.04)
+collision_layer = 4
+collision_mask = 3
 
 [node name="HUD" parent="." unique_id=556092161 instance=ExtResource("5_c12s2")]
 
 [node name="Dialogo" parent="." unique_id=1396874187 instance=ExtResource("7_c12s2")]
 
 [node name="Menino" parent="." unique_id=1491382596 instance=ExtResource("6_c12s2")]
-position = Vector2(-8.000001, 425)
+position = Vector2(-18, 438)
 scale = Vector2(0.8, 0.8)
+collision_layer = 3
+collision_mask = 15
 
 [node name="Menina" parent="." unique_id=543179222 instance=ExtResource("7_jrdtt")]
-position = Vector2(27.999998, 422)
+position = Vector2(17.000008, 430)
 scale = Vector2(0.8, 0.8)
+collision_layer = 2
+collision_mask = 15
+
+[node name="SpawnGhost" type="Node2D" parent="." unique_id=617054003]
+script = ExtResource("8_3t4wc")
+cena_fantasma = ExtResource("8_a6duw")
+
+[node name="Fantasma1" parent="SpawnGhost" unique_id=2004640049 instance=ExtResource("8_a6duw")]
+position = Vector2(331, 326)
+scale = Vector2(0.5, 0.5)
+
+[node name="Fantasma2" parent="SpawnGhost" unique_id=1631944412 instance=ExtResource("8_a6duw")]
+position = Vector2(821, 335)
+scale = Vector2(0.5, 0.5)
