@@ -3,7 +3,7 @@ extends CharacterBody2D
 @export var SPEED: float = 20.0
 @export var SPEED_PERSEGUICAO: float = 80.0
 @export var DISTANCIA_PATRULHA: float = 90.0
-@export var RAIO_DETECCAO: float = 200.0 # Distância em pixels para começar a seguir
+@export var RAIO_DETECCAO: float = 1000.0 # Distância em pixels para começar a seguir
 
 var posicao_inicial_x: float
 var direcao: int = 1
@@ -21,7 +21,7 @@ func _physics_process(_delta: float) -> void:
 	# Se encontrou um player dentro do raio de deteção, persegue!
 	if alvo != null:
 		# Adiciona pixels no eixo Y para o fantasma mais embaixo do player
-		var alvo_mirado = alvo.global_position + Vector2(0, 140.0) 
+		var alvo_mirado = alvo.global_position + Vector2(0, 130.0) 
 		var direcao_vetor = (alvo_mirado - global_position).normalized()
 		
 		velocity = direcao_vetor * SPEED_PERSEGUICAO	

@@ -1,10 +1,10 @@
 extends Node2D
 
 @export var cena_fantasma: PackedScene
-@export var tempo_espera: float = 2.0
+@export var tempo_espera: float = 2.0 # Tempo de Spawn
 
 func _ready() -> void:
-	# Agora olha para a posição E para o tamanho!
+	# Posição e Tamanho
 	for fantasma in get_children():
 		var posicao_inicial = fantasma.global_position
 		var escala_inicial = fantasma.scale # Guarda o tamanho original
@@ -19,14 +19,14 @@ func renascer_fantasma(pos_inicial: Vector2, escala_inicial: Vector2) -> void:
 	if not is_inside_tree():
 		return
 		
-	# Espera os 2 segundos
+	# Espera o Time de Spawn
 	await get_tree().create_timer(tempo_espera).timeout
 	
-	# Segunda trava: Verifica novamente caso a fase tenha sido fechada durante esses 2 segundos
+	# Verifica novamente caso a fase tenha sido fechada durante esses 2 segundos
 	if not is_inside_tree():
 		return
 		
-	# Cria o fantasma novo!
+	# Spawna o fantasma
 	var novo_fantasma = cena_fantasma.instantiate()
 	novo_fantasma.global_position = pos_inicial
 	novo_fantasma.scale = escala_inicial 
