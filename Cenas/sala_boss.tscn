@@ -79,7 +79,7 @@ position = Vector2(821, 394)
 shape = SubResource("RectangleShape2D_fcnqv")
 
 [node name="Boss" parent="." unique_id=5264430 instance=ExtResource("2_7ael8")]
-position = Vector2(577, 376)
+position = Vector2(572, 374)
 scale = Vector2(0.04, 0.04)
 collision_layer = 4
 collision_mask = 3
