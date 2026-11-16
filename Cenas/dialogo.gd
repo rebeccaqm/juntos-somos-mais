@@ -1,12 +1,4 @@
 extends CanvasLayer
-## Caixa de diálogos do jogo "Juntos Somos Mais".
-##
-## - Menino aparece no canto inferior ESQUERDO, Menina no canto inferior DIREITO
-##   e os demais (Seu Zé, Dona Marta, Dona Rosa, Slime, avisos) embaixo, no CENTRO.
-## - Avançar: botão "Avançar" (mouse) ou teclas Enter / E.
-## - O jogo fica pausado durante a conversa.
-## - Nas fases que têm um nó "Timer" (pátio, biblioteca, cantina), o temporizador
-##   só começa quando a conversa inicial da fase termina.
 
 signal dialogo_terminou(id: String)
 
@@ -45,17 +37,17 @@ const RETRATOS := {
 const CONVERSAS := {
 	# ---------- Corredor ----------
 	"corredor_inicio": [
-		["Menina", "Nossa, a escola hoje está uma bagunça completa..."],
-		["Menino", "É verdade! O vento e a correria do intervalo deixaram lixo no pátio, livros espalhados na biblioteca e frutas no chão da cantina."],
-		["Menina", "Não podemos deixar a escola assim! Se nos dividirmos e ajudarmos os funcionários, conseguimos organizar tudo antes do fim da aula."],
-		["Menino", "Boa ideia! Vamos começar!"],
+		["Lara", "Nossa, a escola hoje está uma bagunça completa..."],
+		["Theo", "É verdade! O vento e a correria do intervalo deixaram lixo no pátio, livros espalhados na biblioteca e frutas no chão da cantina."],
+		["Lara", "Não podemos deixar a escola assim! Se nos dividirmos e ajudarmos os funcionários, conseguimos organizar tudo antes do fim da aula."],
+		["Theo", "Boa ideia! Vamos começar!"],
 	],
 
 	# ---------- Fase 1: Pátio ----------
 	"patio_inicio": [
 		["Seu Zé", "Olá, pessoal! O intervalo acabou e o pátio ficou uma bagunça..."],
-		["Menina", "Nossa, Seu Zé! Tem garrafas e papéis espalhados por todo o chão."],
-		["Menino", "Pode deixar com a gente! Vamos recolher tudo para deixar a escola limpa."],
+		["Lara", "Nossa, Seu Zé! Tem garrafas e papéis espalhados por todo o chão."],
+		["Theo", "Pode deixar com a gente! Vamos recolher tudo para deixar a escola limpa."],
 		["Seu Zé", "Muito obrigado! Quando limparem o pátio, a porta para a biblioteca estará destrancada."],
 	],
 	"patio_porta_trancada": [
@@ -68,37 +60,37 @@ const CONVERSAS := {
 	# ---------- Fase 2: Biblioteca ----------
 	"biblioteca_inicio": [
 		["Dona Marta", "Psiu! Cuidado por onde andam... Houve um pequeno contratempo nas estantes."],
-		["Menino", "Dona Marta, o que aconteceu com os livros?"],
+		["Theo", "Dona Marta, o que aconteceu com os livros?"],
 		["Dona Marta", "Um vento forte soprou e derrubou vários exemplares pelos andares. Preciso da ajuda de vocês para recolher os livros caídos!"],
 		["Dona Marta", "Assim que terminarem, abrirei a passagem para a Cantina."],
 	],
 	"biblioteca_limpa": [
 		["Dona Marta", "Muito obrigada! Todos os livros estão de volta ao seu devido lugar. A porta da cantina está liberada."],
-		["Menino", "Valeu, Dona Marta! Rumo à Cantina!"],
+		["Theo", "Valeu, Dona Marta! Rumo à Cantina!"],
 	],
 
 	# ---------- Fase 3: Cantina ----------
 	"cantina_inicio": [
 		["Dona Rosa", "Ah, ainda bem que vocês chegaram! As frutas caíram das bancadas e estão espalhadas pelo chão."],
-		["Menina", "Deixa com a gente, Dona Rosa! Vamos recolher todas as frutas."],
+		["Lara", "Deixa com a gente, Dona Rosa! Vamos recolher todas as frutas."],
 	],
 	"cantina_limpa": [
 		["Dona Rosa", "Que maravilha! A cantina está limpa e organizada!"],
-		["Menina", "Conseguimos! Deixamos o pátio, a biblioteca e a cantina perfeitamente limpos!"],
-		["Menino", "Mas está faltando uma coisa..."],
+		["Lara", "Conseguimos! Deixamos o pátio, a biblioteca e a cantina perfeitamente limpos!"],
+		["Theo", "Mas está faltando uma coisa..."],
 	],
 
 	# ---------- Boss: o Slime de Sujeira ----------
 	"boss_inicio": [
 		["Slime", "Glooob... Vocês acharam que era só juntar uns papéis e livros? Eu sou a junção de toda a sujeira esquecida da escola!"],
-		["Menina", "Nossa... isso sim é um monstro de sujeira gigante!"],
-		["Menino", "Não adianta tentar nos assustar! Já limpamos o pátio e a biblioteca, e não vai ser uma bola gigante de sujeira que vai parar a gente."],
+		["Lara", "Nossa... isso sim é um monstro de sujeira gigante!"],
+		["Theo", "Não adianta tentar nos assustar! Já limpamos o pátio e a biblioteca, e não vai ser uma bola gigante de sujeira que vai parar a gente."],
 		["Slime", "Glub! Vou espalhar resto de comida por todo lado de novo!"],
 	],
 	"boss_derrotado": [
 		["Slime", "Glooob... não... a limpeza... é meu único ponto fraco... glub..."],
-		["Menina", "Conseguimos! Ele derreteu todinho!"],
-		["Menino", "Agora sim, a escola está completamente limpa!"],
+		["Lara", "Conseguimos! Ele derreteu todinho!"],
+		["Theo", "Agora sim, a escola está completamente limpa!"],
 	],
 }
 
@@ -116,8 +108,8 @@ var _timer: Timer
 var _retrato_slime: AtlasTexture
 
 @onready var _caixas: Dictionary = {
-	"Menino": $Raiz/CaixaMenino,
-	"Menina": $Raiz/CaixaMenina,
+	"Theo": $Raiz/CaixaMenino,
+	"Lara": $Raiz/CaixaMenina,
 	"Outros": $Raiz/CaixaOutros,
 }
 
@@ -260,10 +252,10 @@ func _esconder_caixas() -> void:
 
 
 func _chave_da_caixa(quem: String) -> String:
-	if quem == "Menino":
-		return "Menino"
-	if quem == "Menina":
-		return "Menina"
+	if quem == "Theo":
+		return "Theo"
+	if quem == "Lara":
+		return "Lara"
 	return "Outros"
 
 

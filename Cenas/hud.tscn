@@ -10,20 +10,8 @@
 [ext_resource type="Texture2D" uid="uid://bb5bw817igtmd" path="res://Assets/HUD/coracao_azul_cheio.png" id="8_evudk"]
 [ext_resource type="Texture2D" uid="uid://62s1gbvkps82" path="res://Assets/HUD/retrato_menina.png" id="9_r1c6k"]
 [ext_resource type="Texture2D" uid="uid://sp0d03xqt2ky" path="res://Assets/HUD/coracao_rosa_cheio.png" id="10_devux"]
-
-[sub_resource type="GDScript" id="GDScript_o4l0v"]
-script/source = "extends Control
-
-
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
-"
+[ext_resource type="Texture2D" uid="uid://bacv8iywisvu4" path="res://Assets/HUD/icone_boss.png" id="11_r1c6k"]
+[ext_resource type="Texture2D" uid="uid://bt0714wspnuli" path="res://Assets/HUD/coracao_boss_cheio_x4.png" id="12_devux"]
 
 [node name="HUD" type="Control" unique_id=556092161]
 layout_mode = 3
@@ -32,7 +20,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = SubResource("GDScript_o4l0v")
 
 [node name="PainelPontos" type="NinePatchRect" parent="." unique_id=1644838915]
 layout_mode = 0
@@ -213,5 +200,53 @@ stretch_mode = 5
 custom_minimum_size = Vector2(44, 44)
 layout_mode = 2
 texture = ExtResource("10_devux")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="PainelBoss" type="NinePatchRect" parent="." unique_id=661870403]
+layout_mode = 0
+offset_left = 468.0
+offset_top = 12.0
+offset_right = 692.0
+offset_bottom = 84.0
+texture = ExtResource("1_kgovw")
+patch_margin_left = 12
+patch_margin_top = 12
+patch_margin_right = 12
+patch_margin_bottom = 12
+
+[node name="IconeBoss" type="TextureRect" parent="PainelBoss" unique_id=260796576]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("11_r1c6k")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Corações" type="HBoxContainer" parent="PainelBoss" unique_id=121209651]
+layout_mode = 0
+offset_left = 60.0
+offset_top = 14.0
+offset_right = 200.0
+offset_bottom = 58.0
+
+[node name="Coração1" type="TextureRect" parent="PainelBoss/Corações" unique_id=669449235]
+custom_minimum_size = Vector2(44, 44)
+layout_mode = 2
+texture = ExtResource("12_devux")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Coração2" type="TextureRect" parent="PainelBoss/Corações" unique_id=213081861]
+custom_minimum_size = Vector2(44, 44)
+layout_mode = 2
+texture = ExtResource("12_devux")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Coração3" type="TextureRect" parent="PainelBoss/Corações" unique_id=903217767]
+custom_minimum_size = Vector2(44, 44)
+layout_mode = 2
+texture = ExtResource("12_devux")
 expand_mode = 1
 stretch_mode = 5
