@@ -103,4 +103,7 @@ func morrer() -> void:
 	# Animação de morte
 	if sprite and sprite.sprite_frames.has_animation("dead"):
 		sprite.play("dead")
-		get_parent().dialogofinal()
+		await sprite.animation_finished
+		await get_tree().create_timer(0.8).timeout
+		
+	get_parent().dialogofinal()

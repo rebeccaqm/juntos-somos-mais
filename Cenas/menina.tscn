@@ -71,7 +71,7 @@ script = ExtResource("1_3v7rn")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1382476481]
 position = Vector2(63, 58)
-scale = Vector2(0.61705685, 0.6304348)
+scale = Vector2(0.5, 0.511)
 sprite_frames = SubResource("SpriteFrames_r1pbo")
 animation = &"walk"
 frame = 3

@@ -92,7 +92,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_ogck1")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"dead",
 "speed": 5.0
 }, {
@@ -153,9 +153,9 @@ script = ExtResource("1_1xof2")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1103894748]
 position = Vector2(168.00003, 78)
-scale = Vector2(198.42816, 163.96843)
+scale = Vector2(160, 132.212)
 sprite_frames = SubResource("SpriteFrames_r1pbo")
-animation = &"walk"
+animation = &"dead"
 autoplay = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=191397182]

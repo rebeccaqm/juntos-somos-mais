@@ -59,7 +59,7 @@ script = ExtResource("1_a1noe")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=743637587]
 position = Vector2(52.249992, 53.750004)
-scale = Vector2(0.6505016, 0.6404683)
+scale = Vector2(0.519, 0.511)
 sprite_frames = SubResource("SpriteFrames_r1pbo")
 animation = &"walk"
 frame_progress = 0.27534238
