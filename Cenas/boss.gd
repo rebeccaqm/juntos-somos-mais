@@ -4,9 +4,15 @@ extends CharacterBody2D
 @export var jump_force: float = -300.0
 @export var jump_cooldown: float = 1.6
 
+# --- NOVO: vidas e invencibilidade do boss ---
+@export var vidas: int = 3
+@export var TEMPO_INVENCIVEL: float = 2.0
+@export var INTERVALO_PISCAR: float = 0.1
+
 var direction: float = 1.0
 var can_jump: bool = true
 var is_dead: bool = false # Controla se o Slime travou/morreu
+var invencivel: bool = false # NOVO
 
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var collision_shape: CollisionShape2D = $CollisionShape2D
@@ -56,11 +62,36 @@ func pular() -> void:
 	if not is_dead:
 		can_jump = true
 
-# Quando o jogador pisar no Slime
+# Quando o jogador pisar no Slime (MODIFICADO: agora tira 1 vida)
 func die() -> void:
-	if is_dead:
+	if is_dead or invencivel:
 		return
-		
+
+	vidas -= 1
+	get_parent().atualizar_barra_boss(vidas)   # NOVO: atualiza os corações
+
+	if vidas <= 0:
+		morrer()
+	else:
+		piscar()
+
+# NOVO: pisca durante a invencibilidade
+func piscar() -> void:
+	invencivel = true
+
+	var tween := create_tween()
+	tween.set_loops(int(TEMPO_INVENCIVEL / (INTERVALO_PISCAR * 2.0)))
+	tween.tween_property(sprite, "modulate:a", 0.2, INTERVALO_PISCAR)
+	tween.tween_property(sprite, "modulate:a", 1.0, INTERVALO_PISCAR)
+
+	await get_tree().create_timer(TEMPO_INVENCIVEL).timeout
+
+	tween.kill()
+	sprite.modulate.a = 1.0
+	invencivel = false
+
+# NOVO: este é o antigo die(), com a morte de verdade
+func morrer() -> void:
 	is_dead = true
 	can_jump = false
 	velocity = Vector2.ZERO # O Slime PARA

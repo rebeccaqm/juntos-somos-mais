@@ -3,6 +3,9 @@
 [ext_resource type="Script" uid="uid://b7cyxdaecxntl" path="res://Cenas/sala_boss.gd" id="1_ao44i"]
 [ext_resource type="Texture2D" uid="uid://dnk5w5phwrvcv" path="res://Assets/Boss/SalaBoss.jpg" id="1_cersd"]
 [ext_resource type="PackedScene" uid="uid://cfrlivab140m7" path="res://Cenas/boss.tscn" id="2_7ael8"]
+[ext_resource type="Texture2D" uid="uid://dv4glywqalpbk" path="res://Assets/HUD/coracao_azul_vazio.png" id="2_i8p50"]
+[ext_resource type="Texture2D" uid="uid://c2nrdoqaftx7e" path="res://Assets/HUD/coracao_rosa_vazio.png" id="3_u050o"]
+[ext_resource type="Texture2D" uid="uid://d1mmsmt64axix" path="res://Assets/HUD/coracao_boss_vazio.png" id="4_u050o"]
 [ext_resource type="PackedScene" uid="uid://i7vgiqh3ngpu" path="res://Cenas/hud.tscn" id="5_c12s2"]
 [ext_resource type="PackedScene" uid="uid://1iotk2isge33" path="res://Cenas/menino.tscn" id="6_c12s2"]
 [ext_resource type="PackedScene" uid="uid://dmkv7ja6xecik" path="res://Cenas/dialogo.tscn" id="7_c12s2"]
@@ -33,6 +36,9 @@ size = Vector2(104, 36)
 
 [node name="Sala_Boss" type="Node2D" unique_id=923188775]
 script = ExtResource("1_ao44i")
+coracao_vazio_menino = ExtResource("2_i8p50")
+coracao_vazio_menina = ExtResource("3_u050o")
+coracao_boss_vazio = ExtResource("4_u050o")
 
 [node name="Backgorund" type="Sprite2D" parent="." unique_id=2647479]
 position = Vector2(576, 324)
