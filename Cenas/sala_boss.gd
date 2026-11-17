@@ -30,6 +30,7 @@ var vidas_menino = 3
 
 
 func _ready() -> void:
+	Global.fase_atual = scene_file_path
 	$HUD/PainelPontos.visible = false
 	$HUD/PainelTempo.visible = false
 	
