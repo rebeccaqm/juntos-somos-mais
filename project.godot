@@ -17,6 +17,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 GerenciadorAudio="*uid://dksc20k74jurk"
+Global="*uid://bvui2m4fygrit"
 
 [display]
 

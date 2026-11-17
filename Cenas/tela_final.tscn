@@ -2,16 +2,17 @@
 
 [ext_resource type="Script" uid="uid://nek8rye3fv02" path="res://Cenas/tela_final.gd" id="1_j18o4"]
 [ext_resource type="FontFile" uid="uid://c73vfullbaprv" path="res://Assets/Fontes/PixelifySans-Medium.ttf" id="1_q0rai"]
+[ext_resource type="Texture2D" uid="uid://b7dmihx57pluw" path="res://Assets/Background & Coletáveis/Background & Coletáveis/Pôr do sol no pátio escolar.png" id="2_fkark"]
 [ext_resource type="FontFile" uid="uid://bnpyp7w6rh3g5" path="res://Assets/Fontes/PixelifySans-Regular.ttf" id="2_j18o4"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r1pbo"]
-bg_color = Color(0.33333334, 0.3019608, 0.3019608, 1)
+bg_color = Color(0.3320108, 0.30121025, 0.301217, 0.85490197)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i3cru"]
-bg_color = Color(0.33333334, 0.3019608, 0.3019608, 1)
+bg_color = Color(0.33333334, 0.3019608, 0.3019608, 0.85490197)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k7ecr"]
-bg_color = Color(0.33333334, 0.3019608, 0.3019608, 1)
+bg_color = Color(0.33333334, 0.3019608, 0.3019608, 0.85490197)
 
 [node name="TelaFinal" type="Control" unique_id=473228137]
 layout_mode = 3
@@ -22,14 +23,10 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_j18o4")
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=1658424744]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0, 0, 0, 1)
+[node name="PôrDoSolNoPátioEscolar" type="Sprite2D" parent="." unique_id=1990643314]
+position = Vector2(577.49994, 341)
+scale = Vector2(0.68959326, 0.72263545)
+texture = ExtResource("2_fkark")
 
 [node name="LabelMissaoCumprida" type="Label" parent="." unique_id=1054329735]
 layout_mode = 1

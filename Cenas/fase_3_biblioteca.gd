@@ -9,6 +9,7 @@ var itenscoletados = 0
 
 
 func _ready() -> void:
+	Global.fase_atual = scene_file_path
 	$HUD/PainelPontos/IconeItemComida.visible = false
 	$HUD/PainelPontos/IconeItemLixo.visible = false
 	$HUD/PainelBossMenino.visible = false
@@ -19,6 +20,7 @@ func concluir_tarefa() -> void:
 	itenscoletados += 1
 	$HUD/PainelPontos/ItensColetados.text = str (itenscoletados)
 	if tarefas_concluidas == tarefas_para_liberar_portal:
+		$Timer.stop()
 		portal.ativar()
 		$Dialogo.iniciar("biblioteca_limpa")
 
