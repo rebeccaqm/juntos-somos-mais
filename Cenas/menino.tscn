@@ -52,7 +52,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i3cru"]
-size = Vector2(52, 118.5)
+size = Vector2(57, 115)
 
 [node name="Menino" type="CharacterBody2D" unique_id=1491382596]
 script = ExtResource("1_a1noe")
@@ -65,5 +65,5 @@ animation = &"walk"
 frame_progress = 0.27534238
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1653288900]
-position = Vector2(52, 79.25)
+position = Vector2(49.5, 77.5)
 shape = SubResource("RectangleShape2D_i3cru")

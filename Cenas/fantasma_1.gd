@@ -1,13 +1,15 @@
 extends CharacterBody2D
 
-@export var SPEED: float = 20.0
+@export var SPEED: float = 40.0
 @export var SPEED_PERSEGUICAO: float = 80.0
 @export var DISTANCIA_PATRULHA: float = 90.0
 @export var RAIO_DETECCAO: float = 1000.0 # Distância em pixels para começar a seguir
+@export var FORCA_RECUO: float = 600.0 # Força do Knockback
 
 var posicao_inicial_x: float
 var direcao: int = 1
 var is_dead: bool = false
+var sofrendo_recuo: bool = false
 
 @onready var sprite: Sprite2D = $Fantasminha1
 
@@ -16,12 +18,16 @@ func _ready() -> void:
 	iniciar_flutuacao()
 
 func _physics_process(_delta: float) -> void:
+	if sofrendo_recuo or is_dead:
+		move_and_slide()
+		return
+		
 	var alvo = buscar_player_mais_proximo()
 	
 	# Se encontrou um player dentro do raio de deteção, persegue!
 	if alvo != null:
 		# Adiciona pixels no eixo Y para o fantasma mais embaixo do player
-		var alvo_mirado = alvo.global_position + Vector2(0, 130.0) 
+		var alvo_mirado = alvo.global_position + Vector2(0, 100.0) 
 		var direcao_vetor = (alvo_mirado - global_position).normalized()
 		
 		velocity = direcao_vetor * SPEED_PERSEGUICAO	
@@ -45,6 +51,22 @@ func _physics_process(_delta: float) -> void:
 			sprite.flip_h = false
 
 	move_and_slide()
+
+	for i in get_slide_collision_count():
+		var collision = get_slide_collision(i)
+		var collider = collision.get_collider()
+		
+		if collider and collider.is_in_group("player"):
+			if abs(collision.get_normal().x) > 0.5 and not sofrendo_recuo:
+				
+				if collider.get_parent().has_method("morrer_ou_tomar_dano_menino"):
+					collider.get_parent().morrer_ou_tomar_dano_menino()
+					
+				elif collider.get_parent().has_method("morrer_ou_tomar_dano_menina"):
+					collider.get_parent().morrer_ou_tomar_dano_menina()
+					
+					aplicar_recuo(collider.global_position)
+
 
 # Procura entre os 2 jogadores quem está mais perto e dentro do raio
 func buscar_player_mais_proximo() -> Node2D:
@@ -72,3 +94,16 @@ func die() -> void:
 		return
 	is_dead = true
 	queue_free()
+
+# Knockback
+func aplicar_recuo(posicao_player: Vector2) -> void:
+	sofrendo_recuo = true
+	
+	var direcao_afastamento = (global_position - posicao_player).normalized()
+	
+	velocity = direcao_afastamento * FORCA_RECUO
+	
+	# Espera o Time até voltar
+	await get_tree().create_timer(2.0).timeout
+	sofrendo_recuo = false
+	

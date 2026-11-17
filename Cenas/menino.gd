@@ -53,6 +53,9 @@ func verificar_colisoes() -> void:
 				# De lado
 				get_parent().morrer_ou_tomar_dano_menino()
 				
+				if collider.has_method("aplicar_recuo"):
+					collider.aplicar_recuo(global_position)
+					
 func update_animation(direction: float) -> void:
 	if is_dead:
 		return
