@@ -75,6 +75,9 @@ func tomar_dano() -> void:
 	animated_sprite.modulate.a = 1.0
 	invencivel = false
 				
+				if collider.has_method("aplicar_recuo"):
+					collider.aplicar_recuo(global_position)
+					
 func update_animation(direction: float) -> void:
 	if is_dead:
 		return
