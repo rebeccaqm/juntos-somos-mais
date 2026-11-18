@@ -48,6 +48,7 @@ func _physics_process(delta: float) -> void:
 				sprite.play("walk")
 
 	move_and_slide()
+	verificar_contato_players()   # NOVO: dá dano nos players ao encostar
 
 func pular() -> void:
 	if is_dead:
@@ -61,6 +62,18 @@ func pular() -> void:
 	
 	if not is_dead:
 		can_jump = true
+
+# NOVO: o boss também detecta o contato com os players
+func verificar_contato_players() -> void:
+	for i in get_slide_collision_count():
+		var collision = get_slide_collision(i)
+		var collider = collision.get_collider()
+		
+		if collider and collider.is_in_group("player") and collider.has_method("tomar_dano"):
+			# Player em cima do boss = pisão, tratado no script do player
+			if collision.get_normal().y > 0.5:
+				continue
+			collider.tomar_dano()
 
 # Quando o jogador pisar no Slime (MODIFICADO: agora tira 1 vida)
 func die() -> void:

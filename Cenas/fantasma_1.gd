@@ -4,7 +4,8 @@ extends CharacterBody2D
 @export var SPEED_PERSEGUICAO: float = 80.0
 @export var DISTANCIA_PATRULHA: float = 90.0
 @export var RAIO_DETECCAO: float = 1000.0 # Distância em pixels para começar a seguir
-@export var FORCA_RECUO: float = 600.0 # Força do Knockback
+@export var FORCA_RECUO: float = 250.0 # ALTERADO: Força do Knockback (era 600)
+@export var TEMPO_RECUO: float = 0.3 # NOVO: duração do recuo em segundos
 
 var posicao_inicial_x: float
 var direcao: int = 1
@@ -52,20 +53,19 @@ func _physics_process(_delta: float) -> void:
 
 	move_and_slide()
 
+	# ALTERADO: agora o dano passa pelo tomar_dano() do player (com invencibilidade)
 	for i in get_slide_collision_count():
 		var collision = get_slide_collision(i)
 		var collider = collision.get_collider()
 		
-		if collider and collider.is_in_group("player"):
-			if abs(collision.get_normal().x) > 0.5 and not sofrendo_recuo:
-				
-				if collider.get_parent().has_method("morrer_ou_tomar_dano_menino"):
-					collider.get_parent().morrer_ou_tomar_dano_menino()
-					
-				elif collider.get_parent().has_method("morrer_ou_tomar_dano_menina"):
-					collider.get_parent().morrer_ou_tomar_dano_menina()
-					
-					aplicar_recuo(collider.global_position)
+		if collider and collider.is_in_group("player") and not sofrendo_recuo:
+			# Player em cima do fantasma = pisão, quem trata é o script do player
+			if collision.get_normal().y > 0.5:
+				continue
+			
+			if collider.has_method("tomar_dano"):
+				collider.tomar_dano()
+			aplicar_recuo(collider.global_position)
 
 
 # Procura entre os 2 jogadores quem está mais perto e dentro do raio
@@ -95,15 +95,16 @@ func die() -> void:
 	is_dead = true
 	queue_free()
 
-# Knockback
+# Knockback (ALTERADO: curto, e só dispara uma vez por vez)
 func aplicar_recuo(posicao_player: Vector2) -> void:
+	if sofrendo_recuo:
+		return
 	sofrendo_recuo = true
 	
 	var direcao_afastamento = (global_position - posicao_player).normalized()
 	
 	velocity = direcao_afastamento * FORCA_RECUO
 	
-	# Espera o Time até voltar
-	await get_tree().create_timer(2.0).timeout
+	# Espera o tempo do recuo até voltar
+	await get_tree().create_timer(TEMPO_RECUO).timeout
 	sofrendo_recuo = false
-	

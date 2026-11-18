@@ -56,6 +56,9 @@ func verificar_colisoes() -> void:
 				# De lado
 				tomar_dano()
 				
+				if collider.has_method("aplicar_recuo"):
+					collider.aplicar_recuo(global_position)
+				
 func tomar_dano() -> void:
 	if invencivel:
 		return
@@ -74,10 +77,8 @@ func tomar_dano() -> void:
 	tween.kill()
 	animated_sprite.modulate.a = 1.0
 	invencivel = false
-				
-				if collider.has_method("aplicar_recuo"):
-					collider.aplicar_recuo(global_position)
-					
+	
+	
 func update_animation(direction: float) -> void:
 	if is_dead:
 		return

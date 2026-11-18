@@ -14,7 +14,7 @@ func _ready() -> void:
 	$HUD/PainelPontos/IconeItemLivro.visible = false
 	$HUD/PainelBossMenino.visible = false
 	$HUD/PainelBossMenina.visible = false
-	
+	$HUD/PainelBoss.visible = false
 
 func concluir_tarefa() -> void:
 	tarefas_concluidas += 1
