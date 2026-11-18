@@ -37,10 +37,10 @@ position = Vector2(1, 453)
 shape = SubResource("WorldBoundaryShape2D_i3cru")
 
 [node name="Menina" parent="." unique_id=543179222 instance=ExtResource("2_fe5rr")]
-position = Vector2(87, 600)
+position = Vector2(88, 508)
 
 [node name="Menino" parent="." unique_id=1491382596 instance=ExtResource("3_7ia1q")]
-position = Vector2(201, 485)
+position = Vector2(169, 506)
 
 [node name="Camera2D" type="Camera2D" parent="Menino" unique_id=1625864344]
 limit_left = 2

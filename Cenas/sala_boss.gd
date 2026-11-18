@@ -31,6 +31,7 @@ var vidas_menino = 3
 
 func _ready() -> void:
 	Global.fase_atual = scene_file_path
+	GerenciadorAudio.tocar_musica_boss()
 	$HUD/PainelPontos.visible = false
 	$HUD/PainelTempo.visible = false
 	
@@ -68,6 +69,7 @@ func verificar_fim_de_jogo() -> void:
 		get_tree().call_deferred("change_scene_to_file", "res://Cenas/game_over.tscn")
 		
 func dialogofinal() -> void:
+	GerenciadorAudio.tocar_musica_principal()
 	$Dialogo.iniciar("boss_derrotado")
 	await $Dialogo.dialogo_terminou
 	get_tree().call_deferred("change_scene_to_file", "res://Cenas/tela_final.tscn")

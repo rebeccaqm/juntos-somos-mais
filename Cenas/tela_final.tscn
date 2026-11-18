@@ -83,7 +83,7 @@ layout_mode = 2
 theme_override_fonts/font = ExtResource("2_j18o4")
 theme_override_font_sizes/font_size = 32
 theme_override_styles/normal = SubResource("StyleBoxFlat_k7ecr")
-text = "SAIR
+text = "QUIT
 "
 
 [connection signal="pressed" from="VBoxContainer/Reiniciar" to="." method="_on_reiniciar_pressed"]
