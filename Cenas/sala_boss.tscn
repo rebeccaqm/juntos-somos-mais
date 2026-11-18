@@ -95,14 +95,14 @@ collision_mask = 3
 [node name="Dialogo" parent="." unique_id=1396874187 instance=ExtResource("7_c12s2")]
 
 [node name="Menino" parent="." unique_id=1491382596 instance=ExtResource("6_c12s2")]
-position = Vector2(-12, 434)
-scale = Vector2(0.8, 0.8)
+position = Vector2(-13, 449.99997)
+scale = Vector2(0.7, 0.7)
 collision_layer = 3
 collision_mask = 15
 
 [node name="Menina" parent="." unique_id=543179222 instance=ExtResource("7_jrdtt")]
-position = Vector2(17.000008, 430)
-scale = Vector2(0.8, 0.8)
+position = Vector2(23.000008, 452)
+scale = Vector2(0.7, 0.7)
 collision_layer = 2
 collision_mask = 15
 

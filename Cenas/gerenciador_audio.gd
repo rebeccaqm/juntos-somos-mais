@@ -3,6 +3,7 @@ extends Node
 var musica_menu: AudioStream = preload("res://Assets/Sons/geral/jogo (1).mp3")
 var musica_game_over: AudioStream = preload("res://Assets/Sons/geral/game-over.mp3")
 var som_clique: AudioStream = preload("res://Assets/Sons/geral/game-start (mp3cut.net).mp3")
+var musica_boss: AudioStream = preload("res://Assets/Sons/geral/boss-musica.mp3")
 
 @onready var player_musica: AudioStreamPlayer = $MusicaFundo
 @onready var player_sfx: AudioStreamPlayer = $SomClique
@@ -34,6 +35,14 @@ func tocar_musica_principal() -> void:
 	if player_musica.stream != musica_menu or not player_musica.playing:
 		player_musica.stream = musica_menu
 		player_musica.play()
+		
+
+func tocar_musica_boss() -> void:
+	if player_musica.stream != musica_boss or not player_musica.playing:
+		player_musica.stream = musica_boss
+		player_musica.play()
+		
+		
 
 # Toca a música de Game Over
 func tocar_game_over() -> void:
